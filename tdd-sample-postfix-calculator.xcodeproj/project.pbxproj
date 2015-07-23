@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CFA2C4B6FC320FEF5CDA6A4D /* PHGCalculatorViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2C53D2BBC2C5744829B0F /* PHGCalculatorViewControllerTest.m */; };
+		CFA2C5D4780E331F99272C8E /* PHGCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2CB072B42CFD286F40D0C /* PHGCalculatorViewController.m */; };
+		EBCA1A731B61785B004F09F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1A721B61785B004F09F1 /* main.m */; };
+		EBCA1A761B61785B004F09F1 /* PHGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1A751B61785B004F09F1 /* PHGAppDelegate.m */; };
+		EBCA1A7E1B61785B004F09F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBCA1A7D1B61785B004F09F1 /* Images.xcassets */; };
+		EBCA1A811B61785B004F09F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBCA1A7F1B61785B004F09F1 /* LaunchScreen.xib */; };
+		EBCA1A971B617C3D004F09F1 /* CalculatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBCA1A961B617C3D004F09F1 /* CalculatorView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBCA1A871B61785B004F09F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBCA1A651B61785B004F09F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBCA1A6C1B61785B004F09F1;
+			remoteInfo = "tdd-sample-postfix-calculator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CFA2C4AF58BB10B84F2F21CE /* PHGCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHGCalculatorViewController.h; sourceTree = "<group>"; };
+		CFA2C53D2BBC2C5744829B0F /* PHGCalculatorViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHGCalculatorViewControllerTest.m; sourceTree = "<group>"; };
+		CFA2CB072B42CFD286F40D0C /* PHGCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHGCalculatorViewController.m; sourceTree = "<group>"; };
+		EBCA1A6D1B61785B004F09F1 /* tdd-sample-postfix-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tdd-sample-postfix-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBCA1A711B61785B004F09F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBCA1A721B61785B004F09F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EBCA1A741B61785B004F09F1 /* PHGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHGAppDelegate.h; sourceTree = "<group>"; };
+		EBCA1A751B61785B004F09F1 /* PHGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PHGAppDelegate.m; sourceTree = "<group>"; };
+		EBCA1A7D1B61785B004F09F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EBCA1A801B61785B004F09F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EBCA1A861B61785B004F09F1 /* tdd-sample-postfix-calculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tdd-sample-postfix-calculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBCA1A8B1B61785B004F09F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBCA1A961B617C3D004F09F1 /* CalculatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBCA1A6A1B61785B004F09F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBCA1A831B61785B004F09F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EBCA1A641B61785B004F09F1 = {
+			isa = PBXGroup;
+			children = (
+				EBCA1A6F1B61785B004F09F1 /* tdd-sample-postfix-calculator */,
+				EBCA1A891B61785B004F09F1 /* tdd-sample-postfix-calculatorTests */,
+				EBCA1A6E1B61785B004F09F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBCA1A6E1B61785B004F09F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBCA1A6D1B61785B004F09F1 /* tdd-sample-postfix-calculator.app */,
+				EBCA1A861B61785B004F09F1 /* tdd-sample-postfix-calculatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBCA1A6F1B61785B004F09F1 /* tdd-sample-postfix-calculator */ = {
+			isa = PBXGroup;
+			children = (
+				EBCA1A741B61785B004F09F1 /* PHGAppDelegate.h */,
+				EBCA1A751B61785B004F09F1 /* PHGAppDelegate.m */,
+				EBCA1A7D1B61785B004F09F1 /* Images.xcassets */,
+				EBCA1A7F1B61785B004F09F1 /* LaunchScreen.xib */,
+				EBCA1A701B61785B004F09F1 /* Supporting Files */,
+				CFA2C4AF58BB10B84F2F21CE /* PHGCalculatorViewController.h */,
+				CFA2CB072B42CFD286F40D0C /* PHGCalculatorViewController.m */,
+				EBCA1A961B617C3D004F09F1 /* CalculatorView.xib */,
+			);
+			path = "tdd-sample-postfix-calculator";
+			sourceTree = "<group>";
+		};
+		EBCA1A701B61785B004F09F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBCA1A711B61785B004F09F1 /* Info.plist */,
+				EBCA1A721B61785B004F09F1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBCA1A891B61785B004F09F1 /* tdd-sample-postfix-calculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBCA1A8A1B61785B004F09F1 /* Supporting Files */,
+				CFA2C53D2BBC2C5744829B0F /* PHGCalculatorViewControllerTest.m */,
+			);
+			path = "tdd-sample-postfix-calculatorTests";
+			sourceTree = "<group>";
+		};
+		EBCA1A8A1B61785B004F09F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBCA1A8B1B61785B004F09F1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBCA1A6C1B61785B004F09F1 /* tdd-sample-postfix-calculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBCA1A901B61785B004F09F1 /* Build configuration list for PBXNativeTarget "tdd-sample-postfix-calculator" */;
+			buildPhases = (
+				EBCA1A691B61785B004F09F1 /* Sources */,
+				EBCA1A6A1B61785B004F09F1 /* Frameworks */,
+				EBCA1A6B1B61785B004F09F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tdd-sample-postfix-calculator";
+			productName = "tdd-sample-postfix-calculator";
+			productReference = EBCA1A6D1B61785B004F09F1 /* tdd-sample-postfix-calculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBCA1A851B61785B004F09F1 /* tdd-sample-postfix-calculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBCA1A931B61785B004F09F1 /* Build configuration list for PBXNativeTarget "tdd-sample-postfix-calculatorTests" */;
+			buildPhases = (
+				EBCA1A821B61785B004F09F1 /* Sources */,
+				EBCA1A831B61785B004F09F1 /* Frameworks */,
+				EBCA1A841B61785B004F09F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBCA1A881B61785B004F09F1 /* PBXTargetDependency */,
+			);
+			name = "tdd-sample-postfix-calculatorTests";
+			productName = "tdd-sample-postfix-calculatorTests";
+			productReference = EBCA1A861B61785B004F09F1 /* tdd-sample-postfix-calculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBCA1A651B61785B004F09F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Tracy B. Porter";
+				TargetAttributes = {
+					EBCA1A6C1B61785B004F09F1 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					EBCA1A851B61785B004F09F1 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = EBCA1A6C1B61785B004F09F1;
+					};
+				};
+			};
+			buildConfigurationList = EBCA1A681B61785B004F09F1 /* Build configuration list for PBXProject "tdd-sample-postfix-calculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBCA1A641B61785B004F09F1;
+			productRefGroup = EBCA1A6E1B61785B004F09F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBCA1A6C1B61785B004F09F1 /* tdd-sample-postfix-calculator */,
+				EBCA1A851B61785B004F09F1 /* tdd-sample-postfix-calculatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBCA1A6B1B61785B004F09F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBCA1A811B61785B004F09F1 /* LaunchScreen.xib in Resources */,
+				EBCA1A971B617C3D004F09F1 /* CalculatorView.xib in Resources */,
+				EBCA1A7E1B61785B004F09F1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBCA1A841B61785B004F09F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBCA1A691B61785B004F09F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBCA1A761B61785B004F09F1 /* PHGAppDelegate.m in Sources */,
+				EBCA1A731B61785B004F09F1 /* main.m in Sources */,
+				CFA2C5D4780E331F99272C8E /* PHGCalculatorViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBCA1A821B61785B004F09F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFA2C4B6FC320FEF5CDA6A4D /* PHGCalculatorViewControllerTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBCA1A881B61785B004F09F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBCA1A6C1B61785B004F09F1 /* tdd-sample-postfix-calculator */;
+			targetProxy = EBCA1A871B61785B004F09F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EBCA1A7F1B61785B004F09F1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBCA1A801B61785B004F09F1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBCA1A8E1B61785B004F09F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EBCA1A8F1B61785B004F09F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBCA1A911B61785B004F09F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "tdd-sample-postfix-calculator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EBCA1A921B61785B004F09F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "tdd-sample-postfix-calculator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EBCA1A941B61785B004F09F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "tdd-sample-postfix-calculatorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tdd-sample-postfix-calculator.app/tdd-sample-postfix-calculator";
+			};
+			name = Debug;
+		};
+		EBCA1A951B61785B004F09F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "tdd-sample-postfix-calculatorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tdd-sample-postfix-calculator.app/tdd-sample-postfix-calculator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBCA1A681B61785B004F09F1 /* Build configuration list for PBXProject "tdd-sample-postfix-calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBCA1A8E1B61785B004F09F1 /* Debug */,
+				EBCA1A8F1B61785B004F09F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBCA1A901B61785B004F09F1 /* Build configuration list for PBXNativeTarget "tdd-sample-postfix-calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBCA1A911B61785B004F09F1 /* Debug */,
+				EBCA1A921B61785B004F09F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBCA1A931B61785B004F09F1 /* Build configuration list for PBXNativeTarget "tdd-sample-postfix-calculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBCA1A941B61785B004F09F1 /* Debug */,
+				EBCA1A951B61785B004F09F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBCA1A651B61785B004F09F1 /* Project object */;
+}
