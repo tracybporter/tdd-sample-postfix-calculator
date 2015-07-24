@@ -5,11 +5,12 @@
 @interface PHGCalculatorViewControllerTest : XCTestCase
 @end
 
-@implementation PHGCalculatorViewControllerTest
-PHGCalculatorViewController *calculatorViewController;
+@implementation PHGCalculatorViewControllerTest {
+    PHGCalculatorViewController *calculatorViewController;
+}
 - (void)setUp {
     [super setUp];
-    calculatorViewController = [[PHGCalculatorViewController alloc]initWithNibName:@"CalculatorView" bundle:nil];
+    calculatorViewController = [[PHGCalculatorViewController alloc] initWithNibName:@"CalculatorView" bundle:nil];
     [calculatorViewController view];
 }
 
@@ -17,15 +18,15 @@ PHGCalculatorViewController *calculatorViewController;
     [super tearDown];
 }
 
--(void) testDisplayLabelShouldBeConnected {
+- (void)testDisplayLabelShouldBeConnected {
     XCTAssertNotNil([calculatorViewController numberDisplay]);
 }
 
--(void) testDisplayLabelInitialziedToZero {
+- (void)testDisplayLabelInitialziedToZero {
     XCTAssertEqualObjects(@"0", calculatorViewController.numberDisplay.text);
 }
 
--(void) testPostfixCalculatorLoadedWithView {
+- (void)testPostfixCalculatorLoadedWithView {
     XCTAssertNotNil([calculatorViewController postfixCalculator]);
 }
 
