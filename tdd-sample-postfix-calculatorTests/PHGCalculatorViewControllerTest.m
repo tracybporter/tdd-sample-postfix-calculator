@@ -6,9 +6,11 @@
 @end
 
 @implementation PHGCalculatorViewControllerTest
-
+PHGCalculatorViewController *calculatorViewController;
 - (void)setUp {
     [super setUp];
+    calculatorViewController = [[PHGCalculatorViewController alloc]initWithNibName:@"CalculatorView" bundle:nil];
+    [calculatorViewController view];
 }
 
 - (void)tearDown {
@@ -16,9 +18,11 @@
 }
 
 -(void) testDisplayLabelShouldBeConnected {
-    PHGCalculatorViewController *calculatorViewController = [[PHGCalculatorViewController alloc]initWithNibName:@"CalculatorView" bundle:nil];
-    [calculatorViewController view];
     XCTAssertNotNil([calculatorViewController numberDisplay]);
+}
+
+-(void) testPostfixCalculatorLoadedWithView {
+    XCTAssertNotNil([calculatorViewController postfixCalculator]);
 }
 
 @end

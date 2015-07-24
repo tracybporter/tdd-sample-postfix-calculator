@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CFA2C4B6FC320FEF5CDA6A4D /* PHGCalculatorViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2C53D2BBC2C5744829B0F /* PHGCalculatorViewControllerTest.m */; };
 		CFA2C5D4780E331F99272C8E /* PHGCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2CB072B42CFD286F40D0C /* PHGCalculatorViewController.m */; };
+		CFA2CCD83DC936052C9CA2A9 /* PHGPostfixCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2CC4CED3C55F65BEEFCCE /* PHGPostfixCalculator.m */; };
 		EBCA1A731B61785B004F09F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1A721B61785B004F09F1 /* main.m */; };
 		EBCA1A761B61785B004F09F1 /* PHGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1A751B61785B004F09F1 /* PHGAppDelegate.m */; };
 		EBCA1A7E1B61785B004F09F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBCA1A7D1B61785B004F09F1 /* Images.xcassets */; };
@@ -30,6 +31,8 @@
 		CFA2C4AF58BB10B84F2F21CE /* PHGCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHGCalculatorViewController.h; sourceTree = "<group>"; };
 		CFA2C53D2BBC2C5744829B0F /* PHGCalculatorViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHGCalculatorViewControllerTest.m; sourceTree = "<group>"; };
 		CFA2CB072B42CFD286F40D0C /* PHGCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHGCalculatorViewController.m; sourceTree = "<group>"; };
+		CFA2CC42F2E4BB43EA13B298 /* PHGPostfixCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHGPostfixCalculator.h; sourceTree = "<group>"; };
+		CFA2CC4CED3C55F65BEEFCCE /* PHGPostfixCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHGPostfixCalculator.m; sourceTree = "<group>"; };
 		EBCA1A6D1B61785B004F09F1 /* tdd-sample-postfix-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tdd-sample-postfix-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBCA1A711B61785B004F09F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBCA1A721B61785B004F09F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				CFA2C4AF58BB10B84F2F21CE /* PHGCalculatorViewController.h */,
 				CFA2CB072B42CFD286F40D0C /* PHGCalculatorViewController.m */,
 				EBCA1A961B617C3D004F09F1 /* CalculatorView.xib */,
+				CFA2CC4CED3C55F65BEEFCCE /* PHGPostfixCalculator.m */,
+				CFA2CC42F2E4BB43EA13B298 /* PHGPostfixCalculator.h */,
 			);
 			path = "tdd-sample-postfix-calculator";
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				EBCA1A761B61785B004F09F1 /* PHGAppDelegate.m in Sources */,
 				EBCA1A731B61785B004F09F1 /* main.m in Sources */,
 				CFA2C5D4780E331F99272C8E /* PHGCalculatorViewController.m in Sources */,
+				CFA2CCD83DC936052C9CA2A9 /* PHGPostfixCalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
