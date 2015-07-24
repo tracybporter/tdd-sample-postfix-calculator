@@ -1,7 +1,39 @@
 #import "PHGPostfixCalculator.h"
 
 
-@implementation PHGPostfixCalculator {
+@implementation PHGPostfixCalculator
 
+- (id)init {
+    self.valueStack = [NSMutableArray new];
+    return self;
 }
+
+- (void)append:(NSString *)aNumberValue {
+    [self.valueStack addObject:aNumberValue];
+}
+
+- (NSString *)multiply {
+    NSString *last = [self popStack];
+    NSString *nextToLast = [self popStack];
+
+    [self append:[NSString stringWithFormat:@"%f", last.doubleValue * nextToLast.doubleValue]];
+
+    return self.valueStack.lastObject;
+}
+
+- (NSString *)subtract {
+    NSString *subtrahend = [self popStack];
+    NSString *minuend = [self popStack];
+
+    [self append:[NSString stringWithFormat:@"%f", minuend.doubleValue - subtrahend.doubleValue]];
+
+    return self.valueStack.lastObject;
+}
+
+- (NSString *)popStack {
+    NSString *lastOperand = self.valueStack.lastObject;
+    [self.valueStack removeLastObject];
+    return lastOperand;
+}
+
 @end
