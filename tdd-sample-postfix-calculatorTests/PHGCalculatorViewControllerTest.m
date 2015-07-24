@@ -21,6 +21,10 @@ PHGCalculatorViewController *calculatorViewController;
     XCTAssertNotNil([calculatorViewController numberDisplay]);
 }
 
+-(void) testDisplayLabelInitialziedToZero {
+    XCTAssertEqualObjects(@"0", calculatorViewController.numberDisplay.text);
+}
+
 -(void) testPostfixCalculatorLoadedWithView {
     XCTAssertNotNil([calculatorViewController postfixCalculator]);
 }
