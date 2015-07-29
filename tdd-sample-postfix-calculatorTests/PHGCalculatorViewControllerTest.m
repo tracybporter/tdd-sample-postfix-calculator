@@ -22,12 +22,26 @@
     XCTAssertNotNil([calculatorViewController numberDisplay]);
 }
 
-- (void)testDisplayLabelInitialziedToZero {
+- (void)testDisplayLabelInitializedToZero {
     XCTAssertEqualObjects(@"0", calculatorViewController.numberDisplay.text);
 }
 
 - (void)testPostfixCalculatorLoadedWithView {
     XCTAssertNotNil([calculatorViewController postfixCalculator]);
+}
+
+- (void)testSubviewsExistForNumberButtons {
+    NSArray *subviews = calculatorViewController.view.subviews;
+    bool buttonFound = false;
+    for (id subview in  subviews) {
+        if ([subview isKindOfClass:[UIButton class]]) {
+            if ([[subview currentTitle] isEqualToString:@"1"]) {
+                buttonFound = true;
+            }
+        }
+    }
+    XCTAssertTrue(buttonFound);
+    XCTAssertEqual(2, subviews.count);
 }
 
 @end

@@ -15,7 +15,6 @@
     self.window.rootViewController = self.calculatorViewController;
 
     [self.window makeKeyAndVisible];
-    // Override point for customization after application launch.
     return YES;
 }
 
