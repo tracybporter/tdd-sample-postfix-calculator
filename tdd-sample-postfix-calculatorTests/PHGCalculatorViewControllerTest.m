@@ -30,13 +30,14 @@ PHGCalculatorViewController *calculatorViewController;
     XCTAssertNotNil([calculatorViewController postfixCalculator]);
 }
 
-- (void)testSubviewsExistForEachNumberButtons {
-    XCTAssertTrue([self foundButtonWithTitle:@"1"]);
+- (void)testSubviewsExistForEachNumber {
+    XCTAssertTrue([self foundButtonWithTitle:@"1"],"Expected button titled 1");
+    XCTAssertTrue([self foundButtonWithTitle:@"4"],"Expected button titled 4");
+    XCTAssertTrue([self foundButtonWithTitle:@"7"],"Expected button titled 7");
 }
 
 - (BOOL)foundButtonWithTitle:(NSString *)expectedTitle {
     NSArray *subviews = calculatorViewController.view.subviews;
-    XCTAssertEqual(2, subviews.count);
     for (id subview in  subviews) {
         if ([subview isKindOfClass:[UIButton class]]) {
             if ([[subview currentTitle] isEqualToString:expectedTitle]) {
