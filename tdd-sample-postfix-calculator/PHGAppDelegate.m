@@ -1,4 +1,5 @@
 #import "PHGAppDelegate.h"
+#import "PHGCalculatorViewController.h"
 
 @interface PHGAppDelegate ()
 
@@ -8,7 +9,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.calculatorViewController = [[PHGCalculatorViewController alloc] initWithNibName:@"CalculatorView" bundle:nil];
+    self.window.rootViewController = self.calculatorViewController;
+
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
