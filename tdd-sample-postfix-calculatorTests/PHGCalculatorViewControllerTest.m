@@ -1,5 +1,9 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+
+#define MOCKITO_SHORTHAND
+
+#import <OCMockito/OCMockito.h>
 #import "PHGCalculatorViewController.h"
 
 @interface PHGCalculatorViewControllerTest : XCTestCase
@@ -56,7 +60,7 @@ PHGCalculatorViewController *calculatorViewController;
     [self assertNumberButtonActionSent:@"0"];
 }
 
-- (void)testAppendDigit {
+- (void)testAppendDigitHasNoLeadingZero {
     [self touchUpInsideButton:@"2"];
     [self touchUpInsideButton:@"0"];
     [self touchUpInsideButton:@"9"];
@@ -65,6 +69,17 @@ PHGCalculatorViewController *calculatorViewController;
 
 - (void)testSubviewForEnterButton {
     XCTAssertTrue([self foundButtonWithTitle:@"⏎"], "Expected button titled ⏎ (enter)");
+}
+
+- (void)testEnterAddsValueToPostfixCalculator {
+    PHGPostfixCalculator *mockPostfixCalculator = mock([PHGPostfixCalculator class]);
+    calculatorViewController.postfixCalculator = mockPostfixCalculator;
+    [self touchUpInsideButton:@"2"];
+    [self touchUpInsideButton:@"1"];
+    [self touchUpInsideButton:@"3"];
+    [self touchUpInsideButton:@"⏎"];
+
+    [verify(mockPostfixCalculator) append:@"213"];
 }
 
 - (void)assertNumberButtonActionSent:(NSString *)buttonValue {
