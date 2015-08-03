@@ -82,6 +82,20 @@ PHGCalculatorViewController *calculatorViewController;
     [verify(mockPostfixCalculator) append:@"213"];
 }
 
+-(void) testEnterAllowsSubsequentNumbersToBeAppended {
+    PHGPostfixCalculator *mockPostfixCalculator = mock([PHGPostfixCalculator class]);
+    calculatorViewController.postfixCalculator = mockPostfixCalculator;
+    [self touchUpInsideButton:@"2"];
+    [self touchUpInsideButton:@"⏎"];
+
+    [self touchUpInsideButton:@"4"];
+    [self touchUpInsideButton:@"⏎"];
+
+
+    [verify(mockPostfixCalculator) append:@"2"];
+    [verify(mockPostfixCalculator) append:@"4"];
+}
+
 - (void)assertNumberButtonActionSent:(NSString *)buttonValue {
     [self touchUpInsideButton:buttonValue];
     NSString *lastDigit = [calculatorViewController.numberDisplay.text substringFromIndex:[calculatorViewController.numberDisplay.text length] - 1];
