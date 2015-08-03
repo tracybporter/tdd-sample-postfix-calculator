@@ -26,6 +26,7 @@
 
 - (IBAction)doMultiplication {
    self.numberDisplay.text = [self.postfixCalculator multiply];
+    _userIsEnteringANumber = false;
 }
 
 @end
