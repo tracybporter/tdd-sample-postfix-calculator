@@ -34,7 +34,7 @@ PHGCalculatorViewController *calculatorViewController;
     XCTAssertNotNil([calculatorViewController postfixCalculator]);
 }
 
-- (void)testSubviewsExistForEachNumber {
+- (void)testSubviewsExistForEachNumberButton {
     XCTAssertTrue([self foundButtonWithTitle:@"1"], "Expected button titled 1");
     XCTAssertTrue([self foundButtonWithTitle:@"2"], "Expected button titled 2");
     XCTAssertTrue([self foundButtonWithTitle:@"3"], "Expected button titled 3");
@@ -47,7 +47,15 @@ PHGCalculatorViewController *calculatorViewController;
     XCTAssertTrue([self foundButtonWithTitle:@"0"], "Expected button titled 0");
 }
 
-- (void)testButtonsConnectedToAppendDisplayValue {
+- (void)testSubviewForEnterButton {
+    XCTAssertTrue([self foundButtonWithTitle:@"⏎"], "Expected button titled ⏎ (enter)");
+}
+
+- (void)testSubviewForTimesButton {
+    XCTAssertTrue([self foundButtonWithTitle:@"×"], "Expected button titled ⏎ (enter)");
+}
+
+- (void)testNumberButtonsConnectedToAppendDisplayValue {
     [self assertNumberButtonActionSent:@"1"];
     [self assertNumberButtonActionSent:@"2"];
     [self assertNumberButtonActionSent:@"3"];
@@ -67,10 +75,6 @@ PHGCalculatorViewController *calculatorViewController;
     XCTAssertEqualObjects(@"209", calculatorViewController.numberDisplay.text);
 }
 
-- (void)testSubviewForEnterButton {
-    XCTAssertTrue([self foundButtonWithTitle:@"⏎"], "Expected button titled ⏎ (enter)");
-}
-
 - (void)testEnterAddsValueToPostfixCalculator {
     PHGPostfixCalculator *mockPostfixCalculator = mock([PHGPostfixCalculator class]);
     calculatorViewController.postfixCalculator = mockPostfixCalculator;
@@ -82,7 +86,7 @@ PHGCalculatorViewController *calculatorViewController;
     [verify(mockPostfixCalculator) append:@"213"];
 }
 
--(void) testEnterAllowsSubsequentNumbersToBeAppended {
+- (void)testEnterAllowsSubsequentNumbersToBeAppended {
     PHGPostfixCalculator *mockPostfixCalculator = mock([PHGPostfixCalculator class]);
     calculatorViewController.postfixCalculator = mockPostfixCalculator;
     [self touchUpInsideButton:@"2"];
@@ -94,6 +98,10 @@ PHGCalculatorViewController *calculatorViewController;
 
     [verify(mockPostfixCalculator) append:@"2"];
     [verify(mockPostfixCalculator) append:@"4"];
+}
+
+- (void)testTimesButtonConnectedToOperate {
+
 }
 
 - (void)assertNumberButtonActionSent:(NSString *)buttonValue {
