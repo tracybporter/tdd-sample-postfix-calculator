@@ -124,6 +124,9 @@
                     <rect key="frame" x="122" y="137" width="30" height="30"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                     <state key="normal" title="×"/>
+                    <connections>
+                        <action selector="multiply" destination="-1" eventType="touchUpInside" id="VTa-0A-cVy"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

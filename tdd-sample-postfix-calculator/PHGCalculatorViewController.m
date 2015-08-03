@@ -24,4 +24,8 @@
     _userIsEnteringANumber = false;
 }
 
+- (IBAction)multiply {
+    [self.postfixCalculator multiply];
+}
+
 @end
