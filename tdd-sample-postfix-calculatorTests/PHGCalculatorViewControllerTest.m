@@ -11,10 +11,12 @@
 
 @implementation PHGCalculatorViewControllerTest
 PHGCalculatorViewController *calculatorViewController;
+PHGPostfixCalculator *mockPostfixCalculator;
 
 - (void)setUp {
     [super setUp];
     calculatorViewController = [[PHGCalculatorViewController alloc] initWithNibName:@"CalculatorView" bundle:nil];
+    mockPostfixCalculator = mock([PHGPostfixCalculator class]);
     [calculatorViewController view];
 }
 
@@ -75,8 +77,7 @@ PHGCalculatorViewController *calculatorViewController;
     XCTAssertEqualObjects(@"209", calculatorViewController.numberDisplay.text);
 }
 
-- (void)testEnterAddsValueToPostfixCalculator {
-    PHGPostfixCalculator *mockPostfixCalculator = mock([PHGPostfixCalculator class]);
+- (void)testEnterAppendsNumberOnPostfixCalculator {
     calculatorViewController.postfixCalculator = mockPostfixCalculator;
     [self touchUpInsideButton:@"2"];
     [self touchUpInsideButton:@"1"];
@@ -87,7 +88,7 @@ PHGCalculatorViewController *calculatorViewController;
 }
 
 - (void)testEnterAllowsSubsequentNumbersToBeAppended {
-    PHGPostfixCalculator *mockPostfixCalculator = mock([PHGPostfixCalculator class]);
+
     calculatorViewController.postfixCalculator = mockPostfixCalculator;
     [self touchUpInsideButton:@"2"];
     [self touchUpInsideButton:@"⏎"];
@@ -100,8 +101,31 @@ PHGCalculatorViewController *calculatorViewController;
     [verify(mockPostfixCalculator) append:@"4"];
 }
 
-- (void)testTimesButtonConnectedToOperate {
+- (void)testMultiplicationButtonConnectedToDoProduct {
+    calculatorViewController.postfixCalculator = mockPostfixCalculator;
 
+    [self touchUpInsideButton:@"×"];
+    [verify(mockPostfixCalculator) multiply];
+}
+
+- (void)testMultiplicationButtonShowsProductInDisplay {
+    calculatorViewController.postfixCalculator = mockPostfixCalculator;
+    [given([mockPostfixCalculator multiply]) willReturn:@"612"];
+
+    calculatorViewController.doMultiplication;
+
+    XCTAssertEqualObjects(@"612", calculatorViewController.numberDisplay.text);
+    [verify(mockPostfixCalculator) multiply];
+}
+
+- (void)testMultiplicationButtonAllowsNewDigitsToBeEntered {
+    [self touchUpInsideButton:@"3"];
+    calculatorViewController.postfixCalculator = mockPostfixCalculator;
+    [given([mockPostfixCalculator multiply]) willReturn:@"anything"];
+    calculatorViewController.doMultiplication;
+    [self touchUpInsideButton:@"7"];
+
+    XCTAssertEqualObjects(@"7", calculatorViewController.numberDisplay.text);
 }
 
 - (void)assertNumberButtonActionSent:(NSString *)buttonValue {
