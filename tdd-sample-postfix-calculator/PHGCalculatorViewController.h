@@ -5,4 +5,8 @@
 @property(weak, nonatomic) IBOutlet UILabel *numberDisplay;
 @property(strong, nonatomic) PHGPostfixCalculator *postfixCalculator;
 @property(readonly) BOOL userIsEnteringANumber;
+
+- (IBAction)enter;
+
+- (IBAction)doMultiplication;
 @end

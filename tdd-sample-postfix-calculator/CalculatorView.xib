@@ -125,7 +125,7 @@
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                     <state key="normal" title="×"/>
                     <connections>
-                        <action selector="multiply" destination="-1" eventType="touchUpInside" id="VTa-0A-cVy"/>
+                        <action selector="doMultiplication" destination="-1" eventType="touchUpInside" id="ErP-4b-76c"/>
                     </connections>
                 </button>
             </subviews>
