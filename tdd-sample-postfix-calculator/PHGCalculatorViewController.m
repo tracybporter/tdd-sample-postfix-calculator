@@ -8,5 +8,8 @@
     self.postfixCalculator = [[PHGPostfixCalculator alloc] init];
 }
 
+- (IBAction)appendDigitToDisplay:(UIButton *)sender {
+    self.numberDisplay.text = [sender currentTitle];
+}
 
 @end

@@ -26,12 +26,18 @@
                     <state key="normal" title="1">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="appendDigitToDisplay:" destination="-1" eventType="touchUpInside" id="F4d-Th-9I7"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrf-SF-WHB">
                     <rect key="frame" x="8" y="175" width="30" height="30"/>
                     <state key="normal" title="4">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="appendDigitToDisplay:" destination="-1" eventType="touchUpInside" id="SxS-l9-vZd"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIC-JA-x4v">
                     <rect key="frame" x="8" y="137" width="30" height="30"/>
