@@ -25,7 +25,7 @@
 }
 
 - (IBAction)doMultiplication {
-    [self.postfixCalculator multiply];
+   self.numberDisplay.text = [self.postfixCalculator multiply];
 }
 
 @end

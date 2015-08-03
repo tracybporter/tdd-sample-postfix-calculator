@@ -107,16 +107,19 @@ PHGPostfixCalculator *mockPostfixCalculator;
     [self touchUpInsideButton:@"×"];
     [verify(mockPostfixCalculator) multiply];
 }
-//
-//- (void)testMultiplicationButtonShowsProductInDisplay {
-//    calculatorViewController.numberDisplay = @"44";
-//    calculatorViewController.enter;
-//
-//    calculatorViewController.numberDisplay = @"2";
-//    calculatorViewController.doMultiplication;
-//
-//    XCTAssertEqualObjects(@"88", calculatorViewController.numberDisplay.text);
-//}
+
+- (void)testMultiplicationButtonShowsProductInDisplay {
+    calculatorViewController.postfixCalculator = mockPostfixCalculator;
+    [given([mockPostfixCalculator multiply]) willReturn:@"612"];
+
+    calculatorViewController.numberDisplay.text = @"44";
+    calculatorViewController.enter;
+
+    calculatorViewController.numberDisplay.text = @"2";
+    calculatorViewController.doMultiplication;
+
+    XCTAssertEqualObjects(@"612", calculatorViewController.numberDisplay.text);
+}
 
 - (void)assertNumberButtonActionSent:(NSString *)buttonValue {
     [self touchUpInsideButton:buttonValue];
