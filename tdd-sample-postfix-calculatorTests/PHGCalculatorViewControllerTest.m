@@ -55,16 +55,21 @@ PHGCalculatorViewController *calculatorViewController;
     [self assertNumberButtonActionSent:@"9"];
     [self assertNumberButtonActionSent:@"0"];
 }
--(void) testAppendDigit{
+
+- (void)testAppendDigit {
     [self touchUpInsideButton:@"2"];
     [self touchUpInsideButton:@"0"];
     [self touchUpInsideButton:@"9"];
     XCTAssertEqualObjects(@"209", calculatorViewController.numberDisplay.text);
 }
 
+- (void)testSubviewForEnterButton {
+    XCTAssertTrue([self foundButtonWithTitle:@"⏎"], "Expected button titled ⏎ (enter)");
+}
+
 - (void)assertNumberButtonActionSent:(NSString *)buttonValue {
     [self touchUpInsideButton:buttonValue];
-    NSString *lastDigit = [calculatorViewController.numberDisplay.text substringFromIndex: [calculatorViewController.numberDisplay.text length] - 1];
+    NSString *lastDigit = [calculatorViewController.numberDisplay.text substringFromIndex:[calculatorViewController.numberDisplay.text length] - 1];
     XCTAssertEqualObjects(buttonValue, lastDigit);
 }
 
