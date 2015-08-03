@@ -55,10 +55,17 @@ PHGCalculatorViewController *calculatorViewController;
     [self assertNumberButtonActionSent:@"9"];
     [self assertNumberButtonActionSent:@"0"];
 }
+-(void) testAppendDigit{
+    [self touchUpInsideButton:@"2"];
+    [self touchUpInsideButton:@"0"];
+    [self touchUpInsideButton:@"9"];
+    XCTAssertEqualObjects(@"209", calculatorViewController.numberDisplay.text);
+}
 
 - (void)assertNumberButtonActionSent:(NSString *)buttonValue {
     [self touchUpInsideButton:buttonValue];
-    XCTAssertEqualObjects(buttonValue, calculatorViewController.numberDisplay.text.lastPathComponent);
+    NSString *lastDigit = [calculatorViewController.numberDisplay.text substringFromIndex: [calculatorViewController.numberDisplay.text length] - 1];
+    XCTAssertEqualObjects(buttonValue, lastDigit);
 }
 
 - (void)touchUpInsideButton:(NSString *)buttonToSelect {
