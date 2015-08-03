@@ -5,9 +5,9 @@
 @interface PHGCalculatorViewControllerTest : XCTestCase
 @end
 
-@implementation PHGCalculatorViewControllerTest {
-    PHGCalculatorViewController *calculatorViewController;
-}
+@implementation PHGCalculatorViewControllerTest
+PHGCalculatorViewController *calculatorViewController;
+
 - (void)setUp {
     [super setUp];
     calculatorViewController = [[PHGCalculatorViewController alloc] initWithNibName:@"CalculatorView" bundle:nil];
@@ -30,18 +30,21 @@
     XCTAssertNotNil([calculatorViewController postfixCalculator]);
 }
 
-- (void)testSubviewsExistForNumberButtons {
+- (void)testSubviewsExistForEachNumberButtons {
+    XCTAssertTrue([self foundButtonWithTitle:@"1"]);
+}
+
+- (BOOL)foundButtonWithTitle:(NSString *)expectedTitle {
     NSArray *subviews = calculatorViewController.view.subviews;
-    bool buttonFound = false;
+    XCTAssertEqual(2, subviews.count);
     for (id subview in  subviews) {
         if ([subview isKindOfClass:[UIButton class]]) {
-            if ([[subview currentTitle] isEqualToString:@"1"]) {
-                buttonFound = true;
+            if ([[subview currentTitle] isEqualToString:expectedTitle]) {
+                return true;
             }
         }
     }
-    XCTAssertTrue(buttonFound);
-    XCTAssertEqual(2, subviews.count);
+    return false;
 }
 
 @end
