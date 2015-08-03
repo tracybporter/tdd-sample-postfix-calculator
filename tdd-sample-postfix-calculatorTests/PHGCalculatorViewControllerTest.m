@@ -32,20 +32,44 @@ PHGCalculatorViewController *calculatorViewController;
 
 - (void)testSubviewsExistForEachNumber {
     XCTAssertTrue([self foundButtonWithTitle:@"1"], "Expected button titled 1");
+    XCTAssertTrue([self foundButtonWithTitle:@"2"], "Expected button titled 2");
+    XCTAssertTrue([self foundButtonWithTitle:@"3"], "Expected button titled 3");
     XCTAssertTrue([self foundButtonWithTitle:@"4"], "Expected button titled 4");
+    XCTAssertTrue([self foundButtonWithTitle:@"5"], "Expected button titled 5");
+    XCTAssertTrue([self foundButtonWithTitle:@"6"], "Expected button titled 6");
     XCTAssertTrue([self foundButtonWithTitle:@"7"], "Expected button titled 7");
+    XCTAssertTrue([self foundButtonWithTitle:@"8"], "Expected button titled 8");
+    XCTAssertTrue([self foundButtonWithTitle:@"9"], "Expected button titled 9");
+    XCTAssertTrue([self foundButtonWithTitle:@"0"], "Expected button titled 0");
 }
 
-- (void)testSelectingButtonAppendsDispalyValue {
+- (void)testButtonsConnectedToAppendDisplayValue {
+    [self assertNumberButtonActionSent:@"1"];
+    [self assertNumberButtonActionSent:@"2"];
+    [self assertNumberButtonActionSent:@"3"];
+    [self assertNumberButtonActionSent:@"4"];
+    [self assertNumberButtonActionSent:@"5"];
+    [self assertNumberButtonActionSent:@"6"];
+    [self assertNumberButtonActionSent:@"7"];
+    [self assertNumberButtonActionSent:@"8"];
+    [self assertNumberButtonActionSent:@"9"];
+    [self assertNumberButtonActionSent:@"0"];
+}
+
+- (void)assertNumberButtonActionSent:(NSString *)buttonValue {
+    [self touchUpInsideButton:buttonValue];
+    XCTAssertEqualObjects(buttonValue, calculatorViewController.numberDisplay.text.lastPathComponent);
+}
+
+- (void)touchUpInsideButton:(NSString *)buttonToSelect {
     NSArray *subviews = calculatorViewController.view.subviews;
     for (id subview in  subviews) {
         if ([subview isKindOfClass:[UIButton class]]) {
-            if ([[subview currentTitle] isEqualToString:@"4"]) {
+            if ([[subview currentTitle] isEqualToString:buttonToSelect]) {
                 [subview sendActionsForControlEvents:UIControlEventTouchUpInside];
             }
         }
     }
-    XCTAssertEqualObjects(@"4", [[calculatorViewController numberDisplay] text]);
 }
 
 - (BOOL)foundButtonWithTitle:(NSString *)expectedTitle {
