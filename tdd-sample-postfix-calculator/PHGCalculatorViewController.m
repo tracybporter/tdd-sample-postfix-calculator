@@ -19,4 +19,9 @@
     }
 }
 
+- (IBAction)enter {
+    [self.postfixCalculator append:self.numberDisplay.text];
+    _userIsEnteringANumber = false;
+}
+
 @end
