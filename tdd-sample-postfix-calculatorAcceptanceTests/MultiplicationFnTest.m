@@ -30,4 +30,13 @@
     XCTAssertEqualObjects(@"13579024681", [resultsDisplay text]);
 }
 
+-(void) testMultiply2Numbers {
+    [tester tapViewWithAccessibilityLabel:@"Two"];
+    [tester tapViewWithAccessibilityLabel:@"Five"];
+    [tester tapViewWithAccessibilityLabel:@"Multiply"];
+    [tester tapViewWithAccessibilityLabel:@"Zero"];
+    UILabel *resultsDisplay = (UILabel *)[tester waitForViewWithAccessibilityLabel:@"ResultsDisplay"];
+    XCTAssertEqualObjects(@"0", [resultsDisplay text]);
+}
+
 @end
