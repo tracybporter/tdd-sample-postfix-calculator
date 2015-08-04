@@ -9,6 +9,12 @@
     _userIsEnteringANumber = false;
 }
 
+- (IBAction)doAllClear {
+    [self.postfixCalculator allClear];
+    _userIsEnteringANumber = false;
+    self.numberDisplay.text = @"0";
+}
+
 - (IBAction)appendDigitToDisplay:(UIButton *)sender {
     if (_userIsEnteringANumber) {
         self.numberDisplay.text = [NSString stringWithFormat:@"%@%@", self.numberDisplay.text, sender.currentTitle];
@@ -25,7 +31,10 @@
 }
 
 - (IBAction)doMultiplication {
-   self.numberDisplay.text = [self.postfixCalculator multiply];
+    if (_userIsEnteringANumber) {
+        [self enter];
+    }
+    self.numberDisplay.text = [self.postfixCalculator multiply];
     _userIsEnteringANumber = false;
 }
 

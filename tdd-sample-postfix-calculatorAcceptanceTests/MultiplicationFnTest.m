@@ -5,6 +5,7 @@
 @end
 
 @implementation MultiplicationFnTest
+
 - (void)setUp {
     [super setUp];
     [tester tapViewWithAccessibilityLabel:@"AllClear"];
@@ -28,28 +29,25 @@
     [tester tapViewWithAccessibilityLabel:@"Eight"];
     [tester tapViewWithAccessibilityLabel:@"One"];
 
-    UILabel *resultsDisplay = (UILabel *)[tester waitForViewWithAccessibilityLabel:@"ResultsDisplay"];
-
-    XCTAssertEqualObjects(@"13579024681", [resultsDisplay text]);
+    XCTAssertEqualObjects(@"13579024681",  [self retrieveDisplayValue]);
 }
 
- -(void) testCalculateProductOf_71_and_396 {
-     [tester tapViewWithAccessibilityLabel:@"Seven"];
-     [tester tapViewWithAccessibilityLabel:@"One"];
+- (void)testCalculateProductOf_71_and_396 {
+    [tester tapViewWithAccessibilityLabel:@"Seven"];
+    [tester tapViewWithAccessibilityLabel:@"One"];
 
-     [tester tapViewWithAccessibilityLabel:@"Enter"];
+    [tester tapViewWithAccessibilityLabel:@"Enter"];
 
-     [tester tapViewWithAccessibilityLabel:@"Three"];
-     [tester tapViewWithAccessibilityLabel:@"Nine"];
-     [tester tapViewWithAccessibilityLabel:@"Six"];
+    [tester tapViewWithAccessibilityLabel:@"Three"];
+    [tester tapViewWithAccessibilityLabel:@"Nine"];
+    [tester tapViewWithAccessibilityLabel:@"Six"];
 
-     [tester tapViewWithAccessibilityLabel:@"Multiply"];
+    [tester tapViewWithAccessibilityLabel:@"Multiply"];
 
-     UILabel *resultsDisplay = (UILabel *)[tester waitForViewWithAccessibilityLabel:@"ResultsDisplay"];
-     XCTAssertEqualObjects(@"28116", [resultsDisplay text]);
- }
+    XCTAssertEqualObjects(@"28116.000000", [self retrieveDisplayValue]);
+}
 
--(void) testZeroTimesAnythingIsStillZero {
+- (void)testZeroTimesAnythingIsStillZero {
     [tester tapViewWithAccessibilityLabel:@"Zero"];
 
     [tester tapViewWithAccessibilityLabel:@"Enter"];
@@ -59,12 +57,11 @@
 
     [tester tapViewWithAccessibilityLabel:@"Multiply"];
 
-    UILabel *resultsDisplay = (UILabel *)[tester waitForViewWithAccessibilityLabel:@"ResultsDisplay"];
-    XCTAssertEqualObjects(@"0.000000", [resultsDisplay text]);
+    XCTAssertEqualObjects(@"0.000000", [self retrieveDisplayValue]);
 }
 
 - (NSString *)retrieveDisplayValue {
-    return [(UILabel *)[tester waitForViewWithAccessibilityLabel:@"ResultsDisplay"] text];
+    return [(UILabel *) [tester waitForViewWithAccessibilityLabel:@"ResultsDisplay"] text];
 }
 
 
