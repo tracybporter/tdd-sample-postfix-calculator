@@ -14,20 +14,22 @@
 }
 
 - (NSString *)multiply {
-    NSString *last = [self popStack];
-    NSString *nextToLast = [self popStack];
+    if (self.valueStack.count > 1) {
+        NSString *last = [self popStack];
+        NSString *nextToLast = [self popStack];
 
-    [self append:[NSString stringWithFormat:@"%f", last.doubleValue * nextToLast.doubleValue]];
-
+        [self append:[NSString stringWithFormat:@"%f", last.doubleValue * nextToLast.doubleValue]];
+    }
     return self.valueStack.lastObject;
 }
 
 - (NSString *)subtract {
+    if (self.valueStack.count >1){
     NSString *subtrahend = [self popStack];
-    NSString *minuend = [self popStack];
+        NSString *minuend = [self popStack];
 
-    [self append:[NSString stringWithFormat:@"%f", minuend.doubleValue - subtrahend.doubleValue]];
-
+        [self append:[NSString stringWithFormat:@"%f", minuend.doubleValue - subtrahend.doubleValue]];
+    }
     return self.valueStack.lastObject;
 }
 

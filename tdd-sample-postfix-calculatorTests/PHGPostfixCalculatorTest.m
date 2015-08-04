@@ -64,6 +64,11 @@
     XCTAssertEqual(@"3".doubleValue, [[self.postfixCalculator multiply] doubleValue]);
 }
 
+-(void)testMultiplies_SingleValueReturnsItself {
+    [self.postfixCalculator append:@"-10"];
+    XCTAssertEqualObjects(@"-10", [self.postfixCalculator multiply]);
+}
+
 - (void)testSubtracts_PositiveIntegersAndManipulatesStack {
     [self.postfixCalculator append:@"11"];
     [self.postfixCalculator append:@"5"];
@@ -87,6 +92,11 @@
     [self.postfixCalculator append:@"-3"];
 
     XCTAssertEqual(@"13".doubleValue, [[self.postfixCalculator subtract] doubleValue]);
+}
+
+-(void)testSubtracts_SingleValueReturnsItself {
+    [self.postfixCalculator append:@"7771"];
+    XCTAssertEqualObjects(@"7771", [self.postfixCalculator subtract]);
 }
 
 - (void)testCombo_ConsecutiveOperations {

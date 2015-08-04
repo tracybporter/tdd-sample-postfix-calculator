@@ -6,9 +6,9 @@ This is my first objective-c application. It is a simple and incomplete implemen
     1. Display the product of more than two numbers by repeatedly selecting the multiplication button.
     1. Display the difference of two numbers
     1. Entering three numbers and selecting multiply and then subtraction results in correct calculation.
-    1. When only one number on stack, selecting multiply results in no calculation or error.
-    1. When only one number on the stack, selecting subtraction results in no calculation or error.
+    1. When only one number in list, selecting subtraction results in no calculation or error.
 1. Complete
+    1. When only one number in list, selecting multiply results in no calculation or error.
     1. Clear all button resets the list of numbers.
     1. Domain class provides product for last 2 numbers in a list.
     1. Domain class does subtraction on the last 2 numbers in a list. The last number subtracted from the first.
