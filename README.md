@@ -30,7 +30,11 @@ This is my first objective-c application. It is a simple and incomplete implemen
 
 
 # Setup
-1. Prerequisites
-    1. Git
-    1. Ruby (rvm, ruby)
+1. Git
+1. Ruby (rvm, ruby)
+1. Install Cocoapod gem
+1. Clone the repository
+1. `pod install`
+1. Open xcode or appcode
+1. Run all tests
 
