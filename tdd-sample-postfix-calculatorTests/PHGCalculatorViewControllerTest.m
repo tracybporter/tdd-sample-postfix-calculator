@@ -4,7 +4,7 @@
 #define MOCKITO_SHORTHAND
 
 #import <OCMockito/OCMockito.h>
-#import "PHGCalculatorViewController.h"#import "HCBaseDescription.h"
+#import "PHGCalculatorViewController.h"
 
 @interface PHGCalculatorViewControllerTest : XCTestCase
 @end
