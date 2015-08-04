@@ -99,4 +99,14 @@
     XCTAssertEqual(1, self.postfixCalculator.valueStack.count);
 }
 
+-(void) testAllClear_resetsTheStack {
+    XCTAssertEqual(0, self.postfixCalculator.valueStack.count);
+    [self.postfixCalculator append:@"10"];
+    [self.postfixCalculator append:@"3"];
+    XCTAssertEqual(2, self.postfixCalculator.valueStack.count);
+
+    [self.postfixCalculator allClear];
+    XCTAssertEqual(0, self.postfixCalculator.valueStack.count);
+}
+
 @end

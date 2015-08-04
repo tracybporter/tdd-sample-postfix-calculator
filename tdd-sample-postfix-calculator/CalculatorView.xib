@@ -113,7 +113,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgi-pJ-Fxw">
-                    <rect key="frame" x="84" y="133" width="30" height="30"/>
+                    <rect key="frame" x="84" y="137" width="30" height="30"/>
                     <accessibility key="accessibilityConfiguration" label="Nine"/>
                     <state key="normal" title="9">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -139,6 +139,16 @@
                     <state key="normal" title="×"/>
                     <connections>
                         <action selector="doMultiplication" destination="-1" eventType="touchUpInside" id="ErP-4b-76c"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeN-zo-KLR">
+                    <rect key="frame" x="8" y="99" width="30" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="AllClear"/>
+                    <state key="normal" title="AC">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="doAllClear" destination="-1" eventType="touchUpInside" id="Bur-8u-g4s"/>
                     </connections>
                 </button>
             </subviews>
