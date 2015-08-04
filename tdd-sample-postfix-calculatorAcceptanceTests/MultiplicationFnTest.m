@@ -26,17 +26,23 @@
     [tester tapViewWithAccessibilityLabel:@"Six"];
     [tester tapViewWithAccessibilityLabel:@"Eight"];
     [tester tapViewWithAccessibilityLabel:@"One"];
+
     UILabel *resultsDisplay = (UILabel *)[tester waitForViewWithAccessibilityLabel:@"ResultsDisplay"];
+
     XCTAssertEqualObjects(@"13579024681", [resultsDisplay text]);
 }
+-(void) testZeroTimesAnythingIsStillZero {
+    [tester tapViewWithAccessibilityLabel:@"Zero"];
 
--(void) testMultiply2Numbers {
+    [tester tapViewWithAccessibilityLabel:@"Enter"];
+
     [tester tapViewWithAccessibilityLabel:@"Two"];
     [tester tapViewWithAccessibilityLabel:@"Five"];
+
     [tester tapViewWithAccessibilityLabel:@"Multiply"];
-    [tester tapViewWithAccessibilityLabel:@"Zero"];
+
     UILabel *resultsDisplay = (UILabel *)[tester waitForViewWithAccessibilityLabel:@"ResultsDisplay"];
-    XCTAssertEqualObjects(@"0", [resultsDisplay text]);
+    XCTAssertEqualObjects(@"0.000000", [resultsDisplay text]);
 }
 
 @end
