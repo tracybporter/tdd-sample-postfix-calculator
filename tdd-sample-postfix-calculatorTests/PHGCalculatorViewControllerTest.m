@@ -56,6 +56,9 @@ PHGPostfixCalculator *mockPostfixCalculator;
 - (void)testSubviewForTimesButton {
     XCTAssertTrue([self foundButtonWithTitle:@"×"], "Expected button titled ⏎ (enter)");
 }
+- (void)testSubviewForAllClearButton {
+    XCTAssertTrue([self foundButtonWithTitle:@"AC"], "Expected button titled AC");
+}
 
 - (void)testNumberButtonsConnectedToAppendDisplayValue {
     [self assertNumberButtonActionSent:@"1"];
