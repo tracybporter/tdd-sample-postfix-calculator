@@ -60,6 +60,16 @@
     XCTAssertEqualObjects(@"0.000000", [self retrieveDisplayValue]);
 }
 
+-(void) testTheProductOfOneNumberDisplaysItself {
+    [tester tapViewWithAccessibilityLabel:@"Four"];
+    [tester tapViewWithAccessibilityLabel:@"Seven"];
+
+    [tester tapViewWithAccessibilityLabel:@"Enter"];
+    [tester tapViewWithAccessibilityLabel:@"Multiply"];
+
+    XCTAssertEqualObjects(@"47", [self retrieveDisplayValue]);
+}
+
 - (NSString *)retrieveDisplayValue {
     return [(UILabel *) [tester waitForViewWithAccessibilityLabel:@"ResultsDisplay"] text];
 }
