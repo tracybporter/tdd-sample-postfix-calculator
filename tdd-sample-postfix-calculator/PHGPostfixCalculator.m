@@ -4,9 +4,10 @@
 @implementation PHGPostfixCalculator
 
 - (id)init {
-    self.valueStack = [NSMutableArray new];
+    [self allClear];
     return self;
 }
+
 
 - (void)append:(NSString *)aNumberValue {
     [self.valueStack addObject:aNumberValue];
@@ -36,4 +37,7 @@
     return lastOperand;
 }
 
+- (void)allClear {
+    self.valueStack = [NSMutableArray new];
+}
 @end
