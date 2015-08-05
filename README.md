@@ -15,14 +15,17 @@ This is my first objective-c application. It is a simple and incomplete implemen
 1. When only one number in list, selecting subtraction results in no calculation or error.
     
 ## B. Epic: Learn about app store deployment
-1. Tests run at the command line.
-1. Make the application version available in a programatic way
-1. Create a CI environment
-1. Application deployable to CI environment manually
-1. Tests run in the CI environment simulating iOS x
-1. Deploy application to own phone
-1. Release the application as alpha
-1. Deploy application to app store
+1. Awaiting implementation
+    1. Make the application version available in a programatic way
+    1. Create a CI environment
+    1. Application deployable to CI environment manually
+    1. Tests run in the CI environment simulating iOS x
+    1. Deploy application to own phone
+    1. Release the application as alpha
+    1. Deploy application to app store
+1. Completed
+    1. Tests run at the command line.
+        1. `xcodebuild test -workspace tdd-sample-postfix-calculator.xcworkspace -scheme tdd-sample-postfix-calculator -destination 'platform=iOS Simulator,name=iPhone 5s'`
 
 ## C. Epic: Addition and Division and Negative Sign
 ## M. Epic: Make it pretty
