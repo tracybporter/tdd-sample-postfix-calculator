@@ -56,11 +56,11 @@ PHGPostfixCalculator *mockPostfixCalculator;
     XCTAssertTrue([self foundButtonWithTitle:@"0"], "Expected button titled 0");
 }
 
-- (void)testDisplayLabelShouldBeConnected {
+- (void)testConnectionOfLabel_NumberDisplay {
     XCTAssertNotNil([calculatorViewController numberDisplay]);
 }
 
-- (void)testNumberButtonsShouldBeConnected {
+- (void)testConnectionOfAllButton_Numbers {
     [self assertNumberButtonActionSent:@"1"];
     [self assertNumberButtonActionSent:@"2"];
     [self assertNumberButtonActionSent:@"3"];
@@ -73,29 +73,29 @@ PHGPostfixCalculator *mockPostfixCalculator;
     [self assertNumberButtonActionSent:@"0"];
 }
 
-- (void)testEnterButtonShouldBeConnected {
+- (void)testConnectionOfButton_Enter {
     calculatorViewController.numberDisplay.text = @"7";
     [self touchUpInsideButton:@"⏎"];
     [verify(mockPostfixCalculator) append:@"7"];
 }
 
-- (void)testMultiplicationButtonShouldBeConnected {
+- (void)testConnectionOfButton_Multiply {
 
     [self touchUpInsideButton:@"×"];
     [verify(mockPostfixCalculator) multiply];
 }
 
-- (void)testAllClearButtonShouldBeConnected {
+- (void)testConnectionOfButton_AllClear {
 
     [self touchUpInsideButton:@"AC"];
     [verify(mockPostfixCalculator) allClear];
 }
 
-- (void)testDisplayLabelInitializedToZero {
+- (void)testInitializationOfLabel_DisplayToZero {
     XCTAssertEqualObjects(@"0", calculatorViewController.numberDisplay.text);
 }
 
-- (void)testAllClearResetDisplay {
+- (void)testAllClearResetsDisplay {
 
     calculatorViewController.numberDisplay.text = @"7";
     [self touchUpInsideButton:@"⏎"];
