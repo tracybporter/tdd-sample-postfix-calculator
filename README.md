@@ -24,7 +24,7 @@ This is my first objective-c application. It is a simple and incomplete implemen
 1. Release the application as alpha
 1. Deploy application to app store
 
-## C. Epic: Addition and 
+## C. Epic: Addition and Division and Negative Sign
 ## M. Epic: Make it pretty
 
 
@@ -36,4 +36,5 @@ This is my first objective-c application. It is a simple and incomplete implemen
 1. `pod install`
 1. Open xcode or appcode
 1. Run all tests
+1. Run the app in the simulator. I usually pick an iphone.
 
