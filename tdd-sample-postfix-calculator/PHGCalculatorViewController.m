@@ -6,7 +6,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.postfixCalculator = [[PHGPostfixCalculator alloc] init];
-    _userIsEnteringANumber = false;
 }
 
 - (IBAction)doAllClear {
@@ -30,12 +29,18 @@
     _userIsEnteringANumber = false;
 }
 
+- (IBAction)doSubtraction {
+    if (_userIsEnteringANumber) {
+        [self enter];
+    }
+    self.numberDisplay.text = [self.postfixCalculator subtract];
+}
+
 - (IBAction)doMultiplication {
     if (_userIsEnteringANumber) {
         [self enter];
     }
     self.numberDisplay.text = [self.postfixCalculator multiply];
-    _userIsEnteringANumber = false;
 }
 
 @end

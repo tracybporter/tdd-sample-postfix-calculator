@@ -19,7 +19,7 @@
                     <rect key="frame" x="8" y="18" width="263" height="21"/>
                     <accessibility key="accessibilityConfiguration" label="ResultsDisplay"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeI-Lk-if2">
@@ -132,15 +132,6 @@
                         <action selector="enter" destination="-1" eventType="touchUpInside" id="Fg5-TJ-sVR"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bY9-hc-Mmd">
-                    <rect key="frame" x="122" y="137" width="30" height="30"/>
-                    <accessibility key="accessibilityConfiguration" label="Multiply"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                    <state key="normal" title="×"/>
-                    <connections>
-                        <action selector="doMultiplication" destination="-1" eventType="touchUpInside" id="ErP-4b-76c"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeN-zo-KLR">
                     <rect key="frame" x="8" y="99" width="30" height="30"/>
                     <accessibility key="accessibilityConfiguration" label="AllClear"/>
@@ -149,6 +140,25 @@
                     </state>
                     <connections>
                         <action selector="doAllClear" destination="-1" eventType="touchUpInside" id="Bur-8u-g4s"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNZ-Qf-ngG">
+                    <rect key="frame" x="116" y="175" width="30" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="Subtract"/>
+                    <state key="normal" title="−">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="doSubtraction" destination="-1" eventType="touchUpInside" id="cmG-mo-Cz5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bY9-hc-Mmd">
+                    <rect key="frame" x="116" y="137" width="30" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="Multiply"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <state key="normal" title="×"/>
+                    <connections>
+                        <action selector="doMultiplication" destination="-1" eventType="touchUpInside" id="ErP-4b-76c"/>
                     </connections>
                 </button>
             </subviews>
