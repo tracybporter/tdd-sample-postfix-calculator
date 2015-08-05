@@ -30,12 +30,15 @@
     _userIsEnteringANumber = false;
 }
 
+- (IBAction)doSubtraction {
+    [self.postfixCalculator subtract];
+}
+
 - (IBAction)doMultiplication {
     if (_userIsEnteringANumber) {
         [self enter];
     }
     self.numberDisplay.text = [self.postfixCalculator multiply];
-    _userIsEnteringANumber = false;
 }
 
 @end

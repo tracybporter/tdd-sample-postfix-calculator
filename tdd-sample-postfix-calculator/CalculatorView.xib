@@ -148,6 +148,9 @@
                     <state key="normal" title="−">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="doSubtraction" destination="-1" eventType="touchUpInside" id="cmG-mo-Cz5"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bY9-hc-Mmd">
                     <rect key="frame" x="116" y="137" width="30" height="30"/>
