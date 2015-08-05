@@ -27,23 +27,23 @@ PHGPostfixCalculator *mockPostfixCalculator;
     [super tearDown];
 }
 
-- (void)testSubviewForEnterButton {
+- (void)testSubview_EnterButton {
     XCTAssertTrue([self foundButtonWithTitle:@"⏎"], "Expected button titled ⏎ (enter)");
 }
 
-- (void)testSubviewForMulitplicationButton {
+- (void)testSubview_MultiplyButton {
     XCTAssertTrue([self foundButtonWithTitle:@"×"], "Expected button titled ×");
 }
 
-- (void)testSubviewForSubtractionButton {
+- (void)testSubview_SubtractButton {
     XCTAssertTrue([self foundButtonWithTitle:@"−"], "Expected button titled −");
 }
 
-- (void)testSubviewForAllClearButton {
+- (void)testSubview_AllClearButton {
     XCTAssertTrue([self foundButtonWithTitle:@"AC"], "Expected button titled AC");
 }
 
-- (void)testSubviewsExistForEachNumberButton {
+- (void)testSubviews_NumberButtons {
     XCTAssertTrue([self foundButtonWithTitle:@"1"], "Expected button titled 1");
     XCTAssertTrue([self foundButtonWithTitle:@"2"], "Expected button titled 2");
     XCTAssertTrue([self foundButtonWithTitle:@"3"], "Expected button titled 3");
@@ -60,7 +60,7 @@ PHGPostfixCalculator *mockPostfixCalculator;
     XCTAssertNotNil([calculatorViewController numberDisplay]);
 }
 
-- (void)testConnectionOfAllButton_Numbers {
+- (void)testConnectionOfButtons_Numbers {
     [self assertNumberButtonActionSent:@"1"];
     [self assertNumberButtonActionSent:@"2"];
     [self assertNumberButtonActionSent:@"3"];
