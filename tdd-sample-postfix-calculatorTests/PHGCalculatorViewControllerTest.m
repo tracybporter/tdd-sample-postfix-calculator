@@ -121,10 +121,10 @@ PHGPostfixCalculator *mockPostfixCalculator;
 }
 
 - (void)testEnter_AppendsNumbers {
-    calculatorViewController.numberDisplay.text = @"2";
+    [self touchUpInsideButton:@"2"];
     [calculatorViewController enter];
 
-    calculatorViewController.numberDisplay.text = @"4";
+    [self touchUpInsideButton:@"4"];
     [calculatorViewController enter];
 
     [verify(mockPostfixCalculator) append:@"2"];
@@ -140,22 +140,34 @@ PHGPostfixCalculator *mockPostfixCalculator;
     [verify(mockPostfixCalculator) multiply];
 }
 
-- (void)testDoMultiplication_AppendsWhenUserSkipsEnter {
-    [given([mockPostfixCalculator multiply]) willReturn:@"not important here"];
-
-    [self touchUpInsideButton:@"9"];
-    [calculatorViewController doMultiplication];
-
-    [verify(mockPostfixCalculator) append:@"9"];
-}
-
-- (void)testDoMultiplication_AllowsUsersToEnterMoreNumbers {
+- (void)testDoMultiplication_AppendsNumberAndAllowsUsersToEnterMoreNumbers {
     [given([mockPostfixCalculator multiply]) willReturn:@"anything"];
-    calculatorViewController.numberDisplay.text = @"1";
+    [self touchUpInsideButton:@"9"];
+    [self touchUpInsideButton:@"1"];
     [calculatorViewController doMultiplication];
     [self touchUpInsideButton:@"7"];
 
+    [verify(mockPostfixCalculator) append:@"91"];
     XCTAssertEqualObjects(@"7", calculatorViewController.numberDisplay.text);
+}
+
+- (void)testDoSubtraction_ShowsDifferenceInNumberDisplay {
+    [given([mockPostfixCalculator subtract]) willReturn:@"333"];
+
+    [calculatorViewController doSubtraction];
+
+    XCTAssertEqualObjects(@"333", calculatorViewController.numberDisplay.text);
+    [verify(mockPostfixCalculator) subtract];
+}
+
+- (void)testDoSubtraction_AppendsNumberAndAllowsUsersToEnterMoreNumbers {
+    [given([mockPostfixCalculator subtract]) willReturn:@"anything"];
+    [self touchUpInsideButton:@"1"];
+    [calculatorViewController doSubtraction];
+    [self touchUpInsideButton:@"8"];
+
+    [verify(mockPostfixCalculator) append:@"1"];
+    XCTAssertEqualObjects(@"8", calculatorViewController.numberDisplay.text);
 }
 
 - (void)assertNumberButtonActionSent:(NSString *)buttonValue {
