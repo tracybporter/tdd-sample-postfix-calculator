@@ -9,4 +9,6 @@
 - (IBAction)enter;
 
 - (IBAction)doMultiplication;
+
+- (IBAction)doSubtraction;
 @end

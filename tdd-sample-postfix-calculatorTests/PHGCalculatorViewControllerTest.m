@@ -16,31 +16,34 @@ PHGPostfixCalculator *mockPostfixCalculator;
 - (void)setUp {
     [super setUp];
     calculatorViewController = [[PHGCalculatorViewController alloc] initWithNibName:@"CalculatorView" bundle:nil];
-    mockPostfixCalculator = mock([PHGPostfixCalculator class]);
     [calculatorViewController view];
+    mockPostfixCalculator = mock([PHGPostfixCalculator class]);
+    XCTAssertNotNil([calculatorViewController postfixCalculator]);
+    calculatorViewController.postfixCalculator = mockPostfixCalculator;
 }
 
 - (void)tearDown {
+    calculatorViewController = nil;
     [super tearDown];
 }
 
-- (void)testPostfixCalculatorLoadedWithView {
-    XCTAssertNotNil([calculatorViewController postfixCalculator]);
-}
-
-- (void)testSubviewForEnterButton {
+- (void)testSubview_EnterButton {
     XCTAssertTrue([self foundButtonWithTitle:@"⏎"], "Expected button titled ⏎ (enter)");
 }
 
-- (void)testSubviewForTimesButton {
-    XCTAssertTrue([self foundButtonWithTitle:@"×"], "Expected button titled ⏎ (enter)");
+- (void)testSubview_MultiplyButton {
+    XCTAssertTrue([self foundButtonWithTitle:@"×"], "Expected button titled ×");
 }
 
-- (void)testSubviewForAllClearButton {
+- (void)testSubview_SubtractButton {
+    XCTAssertTrue([self foundButtonWithTitle:@"−"], "Expected button titled −");
+}
+
+- (void)testSubview_AllClearButton {
     XCTAssertTrue([self foundButtonWithTitle:@"AC"], "Expected button titled AC");
 }
 
-- (void)testSubviewsExistForEachNumberButton {
+- (void)testSubviews_NumberButtons {
     XCTAssertTrue([self foundButtonWithTitle:@"1"], "Expected button titled 1");
     XCTAssertTrue([self foundButtonWithTitle:@"2"], "Expected button titled 2");
     XCTAssertTrue([self foundButtonWithTitle:@"3"], "Expected button titled 3");
@@ -53,11 +56,11 @@ PHGPostfixCalculator *mockPostfixCalculator;
     XCTAssertTrue([self foundButtonWithTitle:@"0"], "Expected button titled 0");
 }
 
-- (void)testDisplayLabelShouldBeConnected {
+- (void)testConnectionOfLabel_NumberDisplay {
     XCTAssertNotNil([calculatorViewController numberDisplay]);
 }
 
-- (void)testNumberButtonsShouldBeConnected {
+- (void)testConnectionOfButtons_Numbers {
     [self assertNumberButtonActionSent:@"1"];
     [self assertNumberButtonActionSent:@"2"];
     [self assertNumberButtonActionSent:@"3"];
@@ -70,64 +73,65 @@ PHGPostfixCalculator *mockPostfixCalculator;
     [self assertNumberButtonActionSent:@"0"];
 }
 
-- (void)testEnterButtonShouldBeConnected {
-    calculatorViewController.postfixCalculator = mockPostfixCalculator;
+- (void)testConnectionOfButton_Enter {
     calculatorViewController.numberDisplay.text = @"7";
     [self touchUpInsideButton:@"⏎"];
     [verify(mockPostfixCalculator) append:@"7"];
 }
 
-- (void)testMultiplicationButtonShouldBeConnected {
-    calculatorViewController.postfixCalculator = mockPostfixCalculator;
-
+- (void)testConnectionOfButton_Multiply {
     [self touchUpInsideButton:@"×"];
     [verify(mockPostfixCalculator) multiply];
 }
 
-- (void)testAllClearButtonShouldBeConnected {
-    calculatorViewController.postfixCalculator = mockPostfixCalculator;
+- (void)testConnectionOfButton_Subtract {
+    [self touchUpInsideButton:@"−"];
+    [verify(mockPostfixCalculator) subtract];
+}
 
+- (void)testConnectionOfButton_AllClear {
     [self touchUpInsideButton:@"AC"];
     [verify(mockPostfixCalculator) allClear];
 }
 
-- (void)testDisplayLabelInitializedToZero {
+- (void)testInitializationOfLabel_DisplayToZero {
     XCTAssertEqualObjects(@"0", calculatorViewController.numberDisplay.text);
 }
 
-- (void)testAllClearResetDisplay {
-    calculatorViewController.postfixCalculator = mockPostfixCalculator;
-
+- (void)testAllClear_ResetsDisplay {
     calculatorViewController.numberDisplay.text = @"7";
-    [self touchUpInsideButton:@"⏎"];
+    [calculatorViewController enter];
     [self touchUpInsideButton:@"AC"];
 
     XCTAssertEqualObjects(@"0", calculatorViewController.numberDisplay.text);
 }
 
-- (void)testNumberDisplayHasNoLeadingZero {
-    [self touchUpInsideButton:@"2"];
-    [self touchUpInsideButton:@"0"];
-    [self touchUpInsideButton:@"9"];
-    XCTAssertEqualObjects(@"209", calculatorViewController.numberDisplay.text);
+
+- (void)testAllClear_AllowsNumbersToBeEnteredWithNoLeadingZero {
+    [self touchUpInsideButton:@"3"];
+    [self touchUpInsideButton:@"AC"];
+    [self touchUpInsideButton:@"5"];
+
+    XCTAssertEqualObjects(@"5", calculatorViewController.numberDisplay.text);
 }
 
-- (void)testEnterAllowsSubsequentNumbersToBeAppended {
-
-    calculatorViewController.postfixCalculator = mockPostfixCalculator;
+- (void)testNumberDisplay_HasNoLeadingZeroWhenNumberButtonSelected {
     [self touchUpInsideButton:@"2"];
-    [self touchUpInsideButton:@"⏎"];
+    XCTAssertEqualObjects(@"2", calculatorViewController.numberDisplay.text);
+}
+
+- (void)testEnter_AppendsNumbers {
+    [self touchUpInsideButton:@"2"];
+    [calculatorViewController enter];
 
     [self touchUpInsideButton:@"4"];
-    [self touchUpInsideButton:@"⏎"];
-
+    [calculatorViewController enter];
 
     [verify(mockPostfixCalculator) append:@"2"];
     [verify(mockPostfixCalculator) append:@"4"];
 }
 
-- (void)testMultiplicationButtonShowsProductInDisplay {
-    calculatorViewController.postfixCalculator = mockPostfixCalculator;
+- (void)testDoMultiplication_ShowsProductInNumberDisplay {
     [given([mockPostfixCalculator multiply]) willReturn:@"612"];
 
     [calculatorViewController doMultiplication];
@@ -136,16 +140,34 @@ PHGPostfixCalculator *mockPostfixCalculator;
     [verify(mockPostfixCalculator) multiply];
 }
 
-- (void)testMultiplicationButtonAllowsNewDigitsToBeEntered {
-    calculatorViewController.postfixCalculator = mockPostfixCalculator;
-
+- (void)testDoMultiplication_AppendsNumberAndAllowsUsersToEnterMoreNumbers {
     [given([mockPostfixCalculator multiply]) willReturn:@"anything"];
-    [self touchUpInsideButton:@"3"];
+    [self touchUpInsideButton:@"9"];
+    [self touchUpInsideButton:@"1"];
     [calculatorViewController doMultiplication];
     [self touchUpInsideButton:@"7"];
 
-    [verify(mockPostfixCalculator) append:@"3"];
+    [verify(mockPostfixCalculator) append:@"91"];
     XCTAssertEqualObjects(@"7", calculatorViewController.numberDisplay.text);
+}
+
+- (void)testDoSubtraction_ShowsDifferenceInNumberDisplay {
+    [given([mockPostfixCalculator subtract]) willReturn:@"333"];
+
+    [calculatorViewController doSubtraction];
+
+    XCTAssertEqualObjects(@"333", calculatorViewController.numberDisplay.text);
+    [verify(mockPostfixCalculator) subtract];
+}
+
+- (void)testDoSubtraction_AppendsNumberAndAllowsUsersToEnterMoreNumbers {
+    [given([mockPostfixCalculator subtract]) willReturn:@"anything"];
+    [self touchUpInsideButton:@"1"];
+    [calculatorViewController doSubtraction];
+    [self touchUpInsideButton:@"8"];
+
+    [verify(mockPostfixCalculator) append:@"1"];
+    XCTAssertEqualObjects(@"8", calculatorViewController.numberDisplay.text);
 }
 
 - (void)assertNumberButtonActionSent:(NSString *)buttonValue {

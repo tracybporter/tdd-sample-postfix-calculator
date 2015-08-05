@@ -1,10 +1,10 @@
 #import <KIF/KIF.h>
 
-@interface MultiplicationFnTest : KIFTestCase
+@interface SubtractionFnTest : KIFTestCase
 
 @end
 
-@implementation MultiplicationFnTest
+@implementation SubtractionFnTest
 
 - (void)setUp {
     [super setUp];
@@ -16,7 +16,7 @@
     [super tearDown];
 }
 
-- (void)test71_times_396 {
+- (void)test71_minus_396 {
     [tester tapViewWithAccessibilityLabel:@"Seven"];
     [tester tapViewWithAccessibilityLabel:@"One"];
 
@@ -26,19 +26,20 @@
     [tester tapViewWithAccessibilityLabel:@"Nine"];
     [tester tapViewWithAccessibilityLabel:@"Six"];
 
-    [tester tapViewWithAccessibilityLabel:@"Multiply"];
+    [tester tapViewWithAccessibilityLabel:@"Subtract"];
 
-    XCTAssertEqualObjects(@"28116.000000", [self retrieveDisplayValue]);
+    XCTAssertEqualObjects(@"-325.000000", [self retrieveDisplayValue]);
 }
 
--(void) testSingleNumberHandledCorrectly {
-    [tester tapViewWithAccessibilityLabel:@"Four"];
+- (void)testSingleNumberHandledCorrectly {
+    [tester tapViewWithAccessibilityLabel:@"Eight"];
     [tester tapViewWithAccessibilityLabel:@"Seven"];
 
     [tester tapViewWithAccessibilityLabel:@"Enter"];
-    [tester tapViewWithAccessibilityLabel:@"Multiply"];
+    XCTAssertEqualObjects(@"87", [self retrieveDisplayValue]);
 
-    XCTAssertEqualObjects(@"47", [self retrieveDisplayValue]);
+    [tester tapViewWithAccessibilityLabel:@"Subtract"];
+    XCTAssertEqualObjects(@"87", [self retrieveDisplayValue]);
 }
 
 - (NSString *)retrieveDisplayValue {
