@@ -32,11 +32,11 @@ PHGPostfixCalculator *mockPostfixCalculator;
 }
 
 - (void)testSubviewForMulitplicationButton {
-    XCTAssertTrue([self foundButtonWithTitle:@"×"], "Expected button titled ⏎ (enter)");
+    XCTAssertTrue([self foundButtonWithTitle:@"×"], "Expected button titled ×");
 }
 
 - (void)testSubviewForSubtractionButton {
-    XCTAssertTrue([self foundButtonWithTitle:@"×"], "Expected button titled ⏎ (enter)");
+    XCTAssertTrue([self foundButtonWithTitle:@"−"], "Expected button titled −");
 }
 
 - (void)testSubviewForAllClearButton {
