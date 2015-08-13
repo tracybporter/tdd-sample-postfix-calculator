@@ -46,6 +46,11 @@
     XCTAssertEqual(@"16".doubleValue, ((NSString *) self.postfixCalculator.valueStack.lastObject).doubleValue);
 }
 
+-(void)testAdd_SingleValueReturnsItself {
+    [self.postfixCalculator append:@"-10"];
+    XCTAssertEqualObjects(@"-10", [self.postfixCalculator add]);
+}
+
 - (void)testMultiplies_PositiveIntegersAndManipulatesStack {
     [self.postfixCalculator append:@"101"];
     [self.postfixCalculator append:@"5"];
