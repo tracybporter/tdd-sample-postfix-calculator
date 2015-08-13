@@ -14,24 +14,29 @@
 }
 
 - (NSString *)add {
-    if (self.valueStack.count > 1) {
-        [self append:[NSString stringWithFormat:@"%f", [self popStack] + [self popStack]]];
-    }
-    return self.valueStack.lastObject;
+    return [self performOperation:^(double lastOnStack, double second) {
+        return (lastOnStack + second);
+    }];
 }
 
 - (NSString *)multiply {
-    if (self.valueStack.count > 1) {
-        [self append:[NSString stringWithFormat:@"%f", [self popStack] * [self popStack]]];
-    }
-    return self.valueStack.lastObject;
+    return [self performOperation:^(double lastOnStack, double second) {
+        return (lastOnStack * second);
+    }];
 }
 
 - (NSString *)subtract {
+    return [self performOperation:^(double lastOnStack, double second) {
+        return ((-1) * lastOnStack + second);
+    }];
+}
+
+- (NSString *)performOperation:(double (^)(double, double))operate {
     if (self.valueStack.count > 1) {
-        [self append:[NSString stringWithFormat:@"%f", ((-1) * [self popStack]) + [self popStack]]];
+        [self append:[NSString stringWithFormat:@"%f", operate([self popStack], [self popStack])]];
     }
     return self.valueStack.lastObject;
+
 }
 
 - (double)popStack {
