@@ -27,7 +27,7 @@
 
 - (NSString *)subtract {
     return [self performOperation:^(double lastOnStack, double second) {
-        return ((-1) * lastOnStack + second);
+        return (second - lastOnStack);
     }];
 }
 
