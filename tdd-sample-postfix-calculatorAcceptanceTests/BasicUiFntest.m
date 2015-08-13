@@ -1,14 +1,11 @@
-#import <KIF/KIF.h>
+#import "PHGBaseFnTest.h"
 
-@interface BasicUiFntest : KIFTestCase
-
+@interface BasicUiFntest : PHGBaseFnTest
 @end
 
 @implementation BasicUiFntest
 - (void)setUp {
     [super setUp];
-    [tester tapViewWithAccessibilityLabel:@"AllClear"];
-    XCTAssertEqualObjects(@"0", [self retrieveDisplayValue]);
 }
 
 - (void)tearDown {
@@ -29,10 +26,6 @@
     [tester tapViewWithAccessibilityLabel:@"One"];
 
     XCTAssertEqualObjects(@"13579024681", [self retrieveDisplayValue]);
-}
-
-- (NSString *)retrieveDisplayValue {
-    return [(UILabel *) [tester waitForViewWithAccessibilityLabel:@"ResultsDisplay"] text];
 }
 
 @end
