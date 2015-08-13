@@ -6,6 +6,8 @@
 
 - (void)append:(NSString *)aNumberValue;
 
+- (NSString *)add;
+
 - (NSString *)multiply;
 
 - (NSString *)subtract;
