@@ -1,6 +1,6 @@
-#import <KIF/KIF.h>
+#import "PHGBaseFnTest.h"
 
-@interface MultiplicationFnTest : KIFTestCase
+@interface MultiplicationFnTest : PHGBaseFnTest
 
 @end
 
@@ -8,8 +8,6 @@
 
 - (void)setUp {
     [super setUp];
-    [tester tapViewWithAccessibilityLabel:@"AllClear"];
-    XCTAssertEqualObjects(@"0", [self retrieveDisplayValue]);
 }
 
 - (void)tearDown {
@@ -39,10 +37,6 @@
     [tester tapViewWithAccessibilityLabel:@"Multiply"];
 
     XCTAssertEqualObjects(@"47", [self retrieveDisplayValue]);
-}
-
-- (NSString *)retrieveDisplayValue {
-    return [(UILabel *) [tester waitForViewWithAccessibilityLabel:@"ResultsDisplay"] text];
 }
 
 @end
