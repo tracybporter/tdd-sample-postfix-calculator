@@ -1,6 +1,6 @@
-#import <KIF/KIF.h>
+#import "PHGBaseFnTest.h"
 
-@interface SubtractionFnTest : KIFTestCase
+@interface SubtractionFnTest : PHGBaseFnTest
 
 @end
 
@@ -8,8 +8,6 @@
 
 - (void)setUp {
     [super setUp];
-    [tester tapViewWithAccessibilityLabel:@"AllClear"];
-    XCTAssertEqualObjects(@"0", [self retrieveDisplayValue]);
 }
 
 - (void)tearDown {
@@ -40,10 +38,6 @@
 
     [tester tapViewWithAccessibilityLabel:@"Subtract"];
     XCTAssertEqualObjects(@"87", [self retrieveDisplayValue]);
-}
-
-- (NSString *)retrieveDisplayValue {
-    return [(UILabel *) [tester waitForViewWithAccessibilityLabel:@"ResultsDisplay"] text];
 }
 
 @end
