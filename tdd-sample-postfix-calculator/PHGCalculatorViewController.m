@@ -29,7 +29,10 @@
     _userIsEnteringANumber = false;
 }
 - (IBAction)doAddition {
-    [self.postfixCalculator add];
+    if (_userIsEnteringANumber) {
+        [self enter];
+    }
+    self.numberDisplay.text =  [self.postfixCalculator add];
 }
 
 - (IBAction)doSubtraction {

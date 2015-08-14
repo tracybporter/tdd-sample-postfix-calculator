@@ -139,6 +139,25 @@ PHGPostfixCalculator *mockPostfixCalculator;
     [verify(mockPostfixCalculator) append:@"4"];
 }
 
+- (void)testDoAddition_ShowsSumInNumberDisplay {
+    [given([mockPostfixCalculator add]) willReturn:@"89"];
+
+    [calculatorViewController doAddition];
+
+    XCTAssertEqualObjects(@"89", calculatorViewController.numberDisplay.text);
+    [verify(mockPostfixCalculator) add];
+}
+
+- (void)testDoAddition_AppendsNumberAndAllowsUsersToEnterMoreNumbers {
+    [given([mockPostfixCalculator multiply]) willReturn:@"anything"];
+    [self touchUpInsideButton:@"4"];
+    [calculatorViewController doAddition];
+    [self touchUpInsideButton:@"3"];
+
+    [verify(mockPostfixCalculator) append:@"4"];
+    XCTAssertEqualObjects(@"3", calculatorViewController.numberDisplay.text);
+}
+
 - (void)testDoMultiplication_ShowsProductInNumberDisplay {
     [given([mockPostfixCalculator multiply]) willReturn:@"612"];
 

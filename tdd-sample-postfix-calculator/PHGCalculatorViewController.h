@@ -10,5 +10,7 @@
 
 - (IBAction)doMultiplication;
 
+- (IBAction)doAddition;
+
 - (IBAction)doSubtraction;
 @end
