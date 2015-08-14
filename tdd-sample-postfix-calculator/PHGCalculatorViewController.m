@@ -28,25 +28,30 @@
     [self.postfixCalculator append:self.numberDisplay.text];
     _userIsEnteringANumber = false;
 }
-- (IBAction)doAddition {
+
+- (IBAction)manageUserEntry:(NSString *(^)(void))doTheMath {
     if (_userIsEnteringANumber) {
         [self enter];
     }
-    self.numberDisplay.text =  [self.postfixCalculator add];
+    self.numberDisplay.text = doTheMath();
+}
+
+- (IBAction)doAddition {
+    [self manageUserEntry:^{
+        return [self.postfixCalculator add];
+    }];
 }
 
 - (IBAction)doSubtraction {
-    if (_userIsEnteringANumber) {
-        [self enter];
-    }
-    self.numberDisplay.text = [self.postfixCalculator subtract];
+    [self manageUserEntry:^{
+        return [self.postfixCalculator subtract];
+    }];
 }
 
 - (IBAction)doMultiplication {
-    if (_userIsEnteringANumber) {
-        [self enter];
-    }
-    self.numberDisplay.text = [self.postfixCalculator multiply];
+    [self manageUserEntry:^{
+        return [self.postfixCalculator multiply];
+    }];
 }
 
 @end
