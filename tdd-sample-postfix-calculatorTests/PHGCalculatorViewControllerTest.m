@@ -38,6 +38,9 @@ PHGPostfixCalculator *mockPostfixCalculator;
 - (void)testSubview_SubtractButton {
     XCTAssertTrue([self foundButtonWithTitle:@"−"], "Expected button titled −");
 }
+- (void)testSubview_AddButton {
+    XCTAssertTrue([self foundButtonWithTitle:@"+"], "Expected button titled −");
+}
 
 - (void)testSubview_AllClearButton {
     XCTAssertTrue([self foundButtonWithTitle:@"AC"], "Expected button titled AC");
@@ -89,6 +92,11 @@ PHGPostfixCalculator *mockPostfixCalculator;
     [verify(mockPostfixCalculator) subtract];
 }
 
+- (void)testConnectionOfButton_Add {
+    [self touchUpInsideButton:@"+"];
+    [verify(mockPostfixCalculator) add];
+}
+
 - (void)testConnectionOfButton_AllClear {
     [self touchUpInsideButton:@"AC"];
     [verify(mockPostfixCalculator) allClear];
@@ -129,6 +137,25 @@ PHGPostfixCalculator *mockPostfixCalculator;
 
     [verify(mockPostfixCalculator) append:@"2"];
     [verify(mockPostfixCalculator) append:@"4"];
+}
+
+- (void)testDoAddition_ShowsSumInNumberDisplay {
+    [given([mockPostfixCalculator add]) willReturn:@"89"];
+
+    [calculatorViewController doAddition];
+
+    XCTAssertEqualObjects(@"89", calculatorViewController.numberDisplay.text);
+    [verify(mockPostfixCalculator) add];
+}
+
+- (void)testDoAddition_AppendsNumberAndAllowsUsersToEnterMoreNumbers {
+    [given([mockPostfixCalculator multiply]) willReturn:@"anything"];
+    [self touchUpInsideButton:@"4"];
+    [calculatorViewController doAddition];
+    [self touchUpInsideButton:@"3"];
+
+    [verify(mockPostfixCalculator) append:@"4"];
+    XCTAssertEqualObjects(@"3", calculatorViewController.numberDisplay.text);
 }
 
 - (void)testDoMultiplication_ShowsProductInNumberDisplay {

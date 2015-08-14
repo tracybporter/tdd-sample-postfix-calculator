@@ -19,7 +19,7 @@
     [super tearDown];
 }
 
-- (void)testPostfixCalculatorConstructedWithEmptyValueStack {
+- (void)testConstructedWithEmptyValueStack {
     XCTAssertNotNil(self.postfixCalculator.valueStack);
     XCTAssertEqual(0, self.postfixCalculator.valueStack.count);
 }
@@ -36,6 +36,19 @@
     [self.postfixCalculator append:@"213"];
     XCTAssertEqual(3, self.postfixCalculator.valueStack.count);
     XCTAssertEqual(@"213", self.postfixCalculator.valueStack[2]);
+}
+
+- (void)testAdd_PositiveIntegersAndManipulatesStack {
+    [self.postfixCalculator append:@"7"];
+    [self.postfixCalculator append:@"9"];
+
+    XCTAssertEqual(@"16".doubleValue, [[self.postfixCalculator add] doubleValue]);
+    XCTAssertEqual(@"16".doubleValue, ((NSString *) self.postfixCalculator.valueStack.lastObject).doubleValue);
+}
+
+-(void)testAdd_SingleValueReturnsItself {
+    [self.postfixCalculator append:@"-10"];
+    XCTAssertEqualObjects(@"-10", [self.postfixCalculator add]);
 }
 
 - (void)testMultiplies_PositiveIntegersAndManipulatesStack {

@@ -13,30 +13,36 @@
     [self.valueStack addObject:aNumberValue];
 }
 
-- (NSString *)multiply {
-    if (self.valueStack.count > 1) {
-        NSString *last = [self popStack];
-        NSString *nextToLast = [self popStack];
+- (NSString *)add {
+    return [self performOperation:^(double lastOnStack, double second) {
+        return (lastOnStack + second);
+    }];
+}
 
-        [self append:[NSString stringWithFormat:@"%f", last.doubleValue * nextToLast.doubleValue]];
-    }
-    return self.valueStack.lastObject;
+- (NSString *)multiply {
+    return [self performOperation:^(double lastOnStack, double second) {
+        return (lastOnStack * second);
+    }];
 }
 
 - (NSString *)subtract {
-    if (self.valueStack.count >1){
-    NSString *subtrahend = [self popStack];
-        NSString *minuend = [self popStack];
-
-        [self append:[NSString stringWithFormat:@"%f", minuend.doubleValue - subtrahend.doubleValue]];
-    }
-    return self.valueStack.lastObject;
+    return [self performOperation:^(double lastOnStack, double second) {
+        return (second - lastOnStack);
+    }];
 }
 
-- (NSString *)popStack {
+- (NSString *)performOperation:(double (^)(double, double))operate {
+    if (self.valueStack.count > 1) {
+        [self append:[NSString stringWithFormat:@"%f", operate([self popStack], [self popStack])]];
+    }
+    return self.valueStack.lastObject;
+
+}
+
+- (double)popStack {
     NSString *lastOperand = self.valueStack.lastObject;
     [self.valueStack removeLastObject];
-    return lastOperand;
+    return lastOperand.doubleValue;
 }
 
 - (void)allClear {
