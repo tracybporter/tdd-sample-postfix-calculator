@@ -20,16 +20,15 @@
 
     [tester tapViewWithAccessibilityLabel:@"Add"];
 
-    XCTAssertEqualObjects(@"-5143.000000", [self retrieveDisplayValue]);
+    XCTAssertEqualObjects(@"5143.000000", [self retrieveDisplayValue]);
 }
 
 - (void)testSingleNumberHandledCorrectly {
     [tester tapViewWithAccessibilityLabel:@"Six"];
 
     [tester tapViewWithAccessibilityLabel:@"Enter"];
-    XCTAssertEqualObjects(@"87", [self retrieveDisplayValue]);
+    [tester tapViewWithAccessibilityLabel:@"Add"];
 
-    [tester tapViewWithAccessibilityLabel:@"Six"];
     XCTAssertEqualObjects(@"6", [self retrieveDisplayValue]);
 }
 
