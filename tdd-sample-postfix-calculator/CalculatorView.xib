@@ -161,6 +161,13 @@
                         <action selector="doMultiplication" destination="-1" eventType="touchUpInside" id="ErP-4b-76c"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mm8-hc-cae">
+                    <rect key="frame" x="116" y="213" width="30" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="Add"/>
+                    <state key="normal" title="+">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <accessibility key="accessibilityConfiguration" label="PHGCalculator"/>
