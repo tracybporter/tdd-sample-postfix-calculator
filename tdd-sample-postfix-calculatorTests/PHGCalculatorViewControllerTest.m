@@ -92,6 +92,11 @@ PHGPostfixCalculator *mockPostfixCalculator;
     [verify(mockPostfixCalculator) subtract];
 }
 
+- (void)testConnectionOfButton_Add {
+    [self touchUpInsideButton:@"+"];
+    [verify(mockPostfixCalculator) add];
+}
+
 - (void)testConnectionOfButton_AllClear {
     [self touchUpInsideButton:@"AC"];
     [verify(mockPostfixCalculator) allClear];

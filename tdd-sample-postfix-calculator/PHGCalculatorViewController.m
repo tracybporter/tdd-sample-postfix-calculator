@@ -28,6 +28,9 @@
     [self.postfixCalculator append:self.numberDisplay.text];
     _userIsEnteringANumber = false;
 }
+- (IBAction)doAddition {
+    [self.postfixCalculator add];
+}
 
 - (IBAction)doSubtraction {
     if (_userIsEnteringANumber) {
