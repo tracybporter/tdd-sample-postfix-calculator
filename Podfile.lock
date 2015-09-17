@@ -1,8 +1,8 @@
 PODS:
-  - KIF (3.2.3):
-    - KIF/XCTest (= 3.2.3)
-  - KIF/XCTest (3.2.3)
-  - OCHamcrest (4.1.1)
+  - KIF (3.3.0):
+    - KIF/Core (= 3.3.0)
+  - KIF/Core (3.3.0)
+  - OCHamcrest (4.2.0)
   - OCMockito (1.4.0):
     - OCHamcrest (~> 4.0)
 
@@ -11,8 +11,8 @@ DEPENDENCIES:
   - OCMockito (~> 1.0)
 
 SPEC CHECKSUMS:
-  KIF: a94bffe9c97e449e44f8fa481c53243d21309e1e
-  OCHamcrest: 6f03ffa81d12feab872638490a44ab0a6d3aca10
+  KIF: 0a82046d06f3648799cac522d2d0f7934214caac
+  OCHamcrest: c14c0b3f4c4e99363e5b87d97bae38c4438b6d5d
   OCMockito: 4981140c9a9ec06c31af40f636e3c0f25f27e6b2
 
 COCOAPODS: 0.38.2
