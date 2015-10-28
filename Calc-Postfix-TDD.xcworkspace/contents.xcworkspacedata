@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/tracybporter/code/tdd-sample-postfix-calculator/Calc-Postfix-TDD.xcodeproj">
+      location = "group:Calc-Postfix-TDD.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

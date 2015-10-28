@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0710"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EBCA1A6C1B61785B004F09F1"
-               BuildableName = "tdd-sample-postfix-calculator.app"
+               BuildableName = "Calc-Postfix-TDD.app"
                BlueprintName = "tdd-sample-postfix-calculator"
-               ReferencedContainer = "container:tdd-sample-postfix-calculator.xcodeproj">
+               ReferencedContainer = "container:Calc-Postfix-TDD.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EBCA1A851B61785B004F09F1"
-               BuildableName = "tdd-sample-postfix-calculatorTests.xctest"
+               BuildableName = "Calc-Postfix-TDD.xctest"
                BlueprintName = "tdd-sample-postfix-calculatorTests"
-               ReferencedContainer = "container:tdd-sample-postfix-calculator.xcodeproj">
+               ReferencedContainer = "container:Calc-Postfix-TDD.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "EB5A6F211B7040FB00057D24"
                BuildableName = "tdd-sample-postfix-calculatorTests copy.xctest"
                BlueprintName = "tdd-sample-postfix-calculatorFnAccepanceTests"
-               ReferencedContainer = "container:tdd-sample-postfix-calculator.xcodeproj">
+               ReferencedContainer = "container:Calc-Postfix-TDD.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -59,7 +59,7 @@
                BlueprintIdentifier = "EB7C10031B70430E00F2F77B"
                BuildableName = "tdd-sample-postfix-calculatorTests copy.xctest"
                BlueprintName = "AcceptanceTests"
-               ReferencedContainer = "container:tdd-sample-postfix-calculator.xcodeproj">
+               ReferencedContainer = "container:Calc-Postfix-TDD.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -71,9 +71,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EB7C10161B70488900F2F77B"
-               BuildableName = "tdd-sample-postfix-calculatorAcceptanceTests.xctest"
+               BuildableName = "Calc-Postfix-TDD.xctest"
                BlueprintName = "tdd-sample-postfix-calculatorAcceptanceTests"
-               ReferencedContainer = "container:tdd-sample-postfix-calculator.xcodeproj">
+               ReferencedContainer = "container:Calc-Postfix-TDD.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -89,9 +89,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EBCA1A851B61785B004F09F1"
-               BuildableName = "tdd-sample-postfix-calculatorTests.xctest"
+               BuildableName = "Calc-Postfix-TDD.xctest"
                BlueprintName = "tdd-sample-postfix-calculatorTests"
-               ReferencedContainer = "container:tdd-sample-postfix-calculator.xcodeproj">
+               ReferencedContainer = "container:Calc-Postfix-TDD.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -101,7 +101,7 @@
                BlueprintIdentifier = "EB5A6F211B7040FB00057D24"
                BuildableName = "tdd-sample-postfix-calculatorTests copy.xctest"
                BlueprintName = "tdd-sample-postfix-calculatorFnAccepanceTests"
-               ReferencedContainer = "container:tdd-sample-postfix-calculator.xcodeproj">
+               ReferencedContainer = "container:Calc-Postfix-TDD.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -111,7 +111,7 @@
                BlueprintIdentifier = "EB7C10031B70430E00F2F77B"
                BuildableName = "tdd-sample-postfix-calculatorTests copy.xctest"
                BlueprintName = "AcceptanceTests"
-               ReferencedContainer = "container:tdd-sample-postfix-calculator.xcodeproj">
+               ReferencedContainer = "container:Calc-Postfix-TDD.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -119,9 +119,19 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EB7C10161B70488900F2F77B"
+               BuildableName = "Calc-Postfix-TDD.xctest"
+               BlueprintName = "tdd-sample-postfix-calculatorAcceptanceTests"
+               ReferencedContainer = "container:Calc-Postfix-TDD.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EB1D65E81BE15E030088FE75"
                BuildableName = "tdd-sample-postfix-calculatorAcceptanceTests.xctest"
                BlueprintName = "tdd-sample-postfix-calculatorAcceptanceTests"
-               ReferencedContainer = "container:tdd-sample-postfix-calculator.xcodeproj">
+               ReferencedContainer = "container:Calc-Postfix-TDD.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -129,9 +139,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EBCA1A6C1B61785B004F09F1"
-            BuildableName = "tdd-sample-postfix-calculator.app"
+            BuildableName = "Calc-Postfix-TDD.app"
             BlueprintName = "tdd-sample-postfix-calculator"
-            ReferencedContainer = "container:tdd-sample-postfix-calculator.xcodeproj">
+            ReferencedContainer = "container:Calc-Postfix-TDD.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -152,9 +162,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EBCA1A6C1B61785B004F09F1"
-            BuildableName = "tdd-sample-postfix-calculator.app"
+            BuildableName = "Calc-Postfix-TDD.app"
             BlueprintName = "tdd-sample-postfix-calculator"
-            ReferencedContainer = "container:tdd-sample-postfix-calculator.xcodeproj">
+            ReferencedContainer = "container:Calc-Postfix-TDD.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -171,9 +181,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EBCA1A6C1B61785B004F09F1"
-            BuildableName = "tdd-sample-postfix-calculator.app"
+            BuildableName = "Calc-Postfix-TDD.app"
             BlueprintName = "tdd-sample-postfix-calculator"
-            ReferencedContainer = "container:tdd-sample-postfix-calculator.xcodeproj">
+            ReferencedContainer = "container:Calc-Postfix-TDD.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
