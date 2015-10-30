@@ -1,12 +1,17 @@
 PODS:
+  - KIF (3.3.0):
+    - KIF/Core (= 3.3.0)
+  - KIF/Core (3.3.0)
   - OCHamcrest (4.3.0)
   - OCMockito (1.4.0):
     - OCHamcrest (~> 4.0)
 
 DEPENDENCIES:
+  - KIF (~> 3.0)
   - OCMockito (~> 1.0)
 
 SPEC CHECKSUMS:
+  KIF: 0a82046d06f3648799cac522d2d0f7934214caac
   OCHamcrest: cd63d27f48a266d4412c0b295b01b8f0940efa81
   OCMockito: 4981140c9a9ec06c31af40f636e3c0f25f27e6b2
 
