@@ -7,14 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		240DB890F4705949E84BCB55 /* libPods-tdd-sample-postfix-calculatorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1DCCF4CD5AD110DD8DF289 /* libPods-tdd-sample-postfix-calculatorTests.a */; };
+		32FCB6C4F07200F0B87CDF54 /* libPods-tdd-sample-postfix-calculatorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0A30C44D95B3E6E4EC7BE6 /* libPods-tdd-sample-postfix-calculatorTests.a */; };
 		CFA2C4B6FC320FEF5CDA6A4D /* PHGCalculatorViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2C53D2BBC2C5744829B0F /* PHGCalculatorViewControllerTest.m */; };
 		CFA2C5D4780E331F99272C8E /* PHGCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2CB072B42CFD286F40D0C /* PHGCalculatorViewController.m */; };
 		CFA2C64BDDEB432084BBCF29 /* PHGPostfixCalculatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2CEF5951C33ACDE9C818B /* PHGPostfixCalculatorTest.m */; };
 		CFA2CCD83DC936052C9CA2A9 /* PHGPostfixCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2CC4CED3C55F65BEEFCCE /* PHGPostfixCalculator.m */; };
-		EB1D65ED1BE15E030088FE75 /* PHGCalculatorViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2C53D2BBC2C5744829B0F /* PHGCalculatorViewControllerTest.m */; };
-		EB1D65EE1BE15E030088FE75 /* PHGPostfixCalculatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2CEF5951C33ACDE9C818B /* PHGPostfixCalculatorTest.m */; };
-		EB1D65F01BE15E030088FE75 /* libPods-tdd-sample-postfix-calculatorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1DCCF4CD5AD110DD8DF289 /* libPods-tdd-sample-postfix-calculatorTests.a */; };
 		EBCA1A731B61785B004F09F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1A721B61785B004F09F1 /* main.m */; };
 		EBCA1A761B61785B004F09F1 /* PHGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1A751B61785B004F09F1 /* PHGAppDelegate.m */; };
 		EBCA1A7E1B61785B004F09F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBCA1A7D1B61785B004F09F1 /* Images.xcassets */; };
@@ -23,13 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EB1D65EA1BE15E030088FE75 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EBCA1A651B61785B004F09F1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EBCA1A6C1B61785B004F09F1;
-			remoteInfo = "tdd-sample-postfix-calculator";
-		};
 		EBCA1A871B61785B004F09F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EBCA1A651B61785B004F09F1 /* Project object */;
@@ -40,9 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B99A84A209DE819C9A5CB24 /* Pods-tdd-sample-postfix-calculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tdd-sample-postfix-calculatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tdd-sample-postfix-calculatorTests/Pods-tdd-sample-postfix-calculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
-		63FE5FF24936EE431CF06CE2 /* Pods-tdd-sample-postfix-calculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tdd-sample-postfix-calculatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tdd-sample-postfix-calculatorTests/Pods-tdd-sample-postfix-calculatorTests.release.xcconfig"; sourceTree = "<group>"; };
-		AA80F2A2F6DF918B4F9CEC4C /* libPods-tdd-sample-postfix-calculatorAcceptanceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tdd-sample-postfix-calculatorAcceptanceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0885CEB549B42291ADA103F4 /* Pods-tdd-sample-postfix-calculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tdd-sample-postfix-calculatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tdd-sample-postfix-calculatorTests/Pods-tdd-sample-postfix-calculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8C0A30C44D95B3E6E4EC7BE6 /* libPods-tdd-sample-postfix-calculatorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tdd-sample-postfix-calculatorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF7B62208FD37522223CC698 /* Pods-tdd-sample-postfix-calculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tdd-sample-postfix-calculatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tdd-sample-postfix-calculatorTests/Pods-tdd-sample-postfix-calculatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		CFA2C0674A81FC760751FA41 /* BasicUiFntest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicUiFntest.m; sourceTree = "<group>"; };
 		CFA2C4AF58BB10B84F2F21CE /* PHGCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHGCalculatorViewController.h; sourceTree = "<group>"; };
 		CFA2C53D2BBC2C5744829B0F /* PHGCalculatorViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHGCalculatorViewControllerTest.m; sourceTree = "<group>"; };
@@ -54,10 +44,6 @@
 		CFA2CC82463BA0023201916E /* SubtractionFnTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtractionFnTest.m; sourceTree = "<group>"; };
 		CFA2CEF5951C33ACDE9C818B /* PHGPostfixCalculatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHGPostfixCalculatorTest.m; sourceTree = "<group>"; };
 		CFA2CFB29FCB20C5A6047B59 /* AdditionFnTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdditionFnTest.m; sourceTree = "<group>"; };
-		E8C410AFF7DE5B0D3F11F379 /* Pods-tdd-sample-postfix-calculatorAcceptanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tdd-sample-postfix-calculatorAcceptanceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tdd-sample-postfix-calculatorAcceptanceTests/Pods-tdd-sample-postfix-calculatorAcceptanceTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EB1D65F61BE15E030088FE75 /* tdd-sample-postfix-calculatorAcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tdd-sample-postfix-calculatorAcceptanceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB1D65F71BE15E030088FE75 /* tdd-sample-postfix-calculatorTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "tdd-sample-postfix-calculatorTests copy-Info.plist"; path = "/Users/tracybporter/code/tdd-sample-postfix-calculator/tdd-sample-postfix-calculatorTests copy-Info.plist"; sourceTree = "<absolute>"; };
-		EB1DCCF4CD5AD110DD8DF289 /* libPods-tdd-sample-postfix-calculatorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tdd-sample-postfix-calculatorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7C101A1B70488900F2F77B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB7C10221B70E6D300F2F77B /* MultiplicationFnTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiplicationFnTest.m; sourceTree = "<group>"; };
 		EBCA1A6D1B61785B004F09F1 /* Calc-Postfix-TDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calc-Postfix-TDD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,18 +56,9 @@
 		EBCA1A861B61785B004F09F1 /* Calc-Postfix-TDD.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calc-Postfix-TDD.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBCA1A8B1B61785B004F09F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBCA1A961B617C3D004F09F1 /* CalculatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorView.xib; sourceTree = "<group>"; };
-		F365ACC8FBC7C1AFB3C23A07 /* Pods-tdd-sample-postfix-calculatorAcceptanceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tdd-sample-postfix-calculatorAcceptanceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tdd-sample-postfix-calculatorAcceptanceTests/Pods-tdd-sample-postfix-calculatorAcceptanceTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EB1D65EF1BE15E030088FE75 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EB1D65F01BE15E030088FE75 /* libPods-tdd-sample-postfix-calculatorTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EBCA1A6A1B61785B004F09F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -93,20 +70,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				240DB890F4705949E84BCB55 /* libPods-tdd-sample-postfix-calculatorTests.a in Frameworks */,
+				32FCB6C4F07200F0B87CDF54 /* libPods-tdd-sample-postfix-calculatorTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B7F4480E6A763C6D5B27DC22 /* Frameworks */ = {
+		526DC8B2E4DFC62142502842 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AA80F2A2F6DF918B4F9CEC4C /* libPods-tdd-sample-postfix-calculatorAcceptanceTests.a */,
-				EB1DCCF4CD5AD110DD8DF289 /* libPods-tdd-sample-postfix-calculatorTests.a */,
+				8C0A30C44D95B3E6E4EC7BE6 /* libPods-tdd-sample-postfix-calculatorTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		753D98F3E49AFC09CD4152E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0885CEB549B42291ADA103F4 /* Pods-tdd-sample-postfix-calculatorTests.debug.xcconfig */,
+				AF7B62208FD37522223CC698 /* Pods-tdd-sample-postfix-calculatorTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		EB7C10181B70488900F2F77B /* tdd-sample-postfix-calculatorAcceptanceTests */ = {
@@ -138,9 +123,8 @@
 				EBCA1A891B61785B004F09F1 /* tdd-sample-postfix-calculatorTests */,
 				EB7C10181B70488900F2F77B /* tdd-sample-postfix-calculatorAcceptanceTests */,
 				EBCA1A6E1B61785B004F09F1 /* Products */,
-				F442CD73FFFDA8663032CA24 /* Pods */,
-				B7F4480E6A763C6D5B27DC22 /* Frameworks */,
-				EB1D65F71BE15E030088FE75 /* tdd-sample-postfix-calculatorTests copy-Info.plist */,
+				753D98F3E49AFC09CD4152E7 /* Pods */,
+				526DC8B2E4DFC62142502842 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,7 +133,6 @@
 			children = (
 				EBCA1A6D1B61785B004F09F1 /* Calc-Postfix-TDD.app */,
 				EBCA1A861B61785B004F09F1 /* Calc-Postfix-TDD.xctest */,
-				EB1D65F61BE15E030088FE75 /* tdd-sample-postfix-calculatorAcceptanceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,40 +181,9 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F442CD73FFFDA8663032CA24 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E8C410AFF7DE5B0D3F11F379 /* Pods-tdd-sample-postfix-calculatorAcceptanceTests.debug.xcconfig */,
-				F365ACC8FBC7C1AFB3C23A07 /* Pods-tdd-sample-postfix-calculatorAcceptanceTests.release.xcconfig */,
-				3B99A84A209DE819C9A5CB24 /* Pods-tdd-sample-postfix-calculatorTests.debug.xcconfig */,
-				63FE5FF24936EE431CF06CE2 /* Pods-tdd-sample-postfix-calculatorTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EB1D65E81BE15E030088FE75 /* tdd-sample-postfix-calculatorAcceptanceTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EB1D65F31BE15E030088FE75 /* Build configuration list for PBXNativeTarget "tdd-sample-postfix-calculatorAcceptanceTests" */;
-			buildPhases = (
-				EB1D65EB1BE15E030088FE75 /* Check Pods Manifest.lock */,
-				EB1D65EC1BE15E030088FE75 /* Sources */,
-				EB1D65EF1BE15E030088FE75 /* Frameworks */,
-				EB1D65F11BE15E030088FE75 /* Resources */,
-				EB1D65F21BE15E030088FE75 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EB1D65E91BE15E030088FE75 /* PBXTargetDependency */,
-			);
-			name = "tdd-sample-postfix-calculatorAcceptanceTests";
-			productName = "tdd-sample-postfix-calculatorTests";
-			productReference = EB1D65F61BE15E030088FE75 /* tdd-sample-postfix-calculatorAcceptanceTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		EBCA1A6C1B61785B004F09F1 /* tdd-sample-postfix-calculator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBCA1A901B61785B004F09F1 /* Build configuration list for PBXNativeTarget "tdd-sample-postfix-calculator" */;
@@ -253,11 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBCA1A931B61785B004F09F1 /* Build configuration list for PBXNativeTarget "tdd-sample-postfix-calculatorTests" */;
 			buildPhases = (
-				253C100F1BE206EBD21E70BC /* Check Pods Manifest.lock */,
+				A83766CD9DA842F2F52F3925 /* Check Pods Manifest.lock */,
 				EBCA1A821B61785B004F09F1 /* Sources */,
 				EBCA1A831B61785B004F09F1 /* Frameworks */,
 				EBCA1A841B61785B004F09F1 /* Resources */,
-				626E7714A71B0BCBDA58B424 /* Copy Pods Resources */,
+				CE024A9AC5943C949B0C8216 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,19 +255,11 @@
 			targets = (
 				EBCA1A6C1B61785B004F09F1 /* tdd-sample-postfix-calculator */,
 				EBCA1A851B61785B004F09F1 /* tdd-sample-postfix-calculatorTests */,
-				EB1D65E81BE15E030088FE75 /* tdd-sample-postfix-calculatorAcceptanceTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EB1D65F11BE15E030088FE75 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EBCA1A6B1B61785B004F09F1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,7 +280,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		253C100F1BE206EBD21E70BC /* Check Pods Manifest.lock */ = {
+		A83766CD9DA842F2F52F3925 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -351,37 +295,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		626E7714A71B0BCBDA58B424 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tdd-sample-postfix-calculatorTests/Pods-tdd-sample-postfix-calculatorTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EB1D65EB1BE15E030088FE75 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		EB1D65F21BE15E030088FE75 /* Copy Pods Resources */ = {
+		CE024A9AC5943C949B0C8216 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -399,15 +313,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EB1D65EC1BE15E030088FE75 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EB1D65ED1BE15E030088FE75 /* PHGCalculatorViewControllerTest.m in Sources */,
-				EB1D65EE1BE15E030088FE75 /* PHGPostfixCalculatorTest.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EBCA1A691B61785B004F09F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -431,11 +336,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EB1D65E91BE15E030088FE75 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EBCA1A6C1B61785B004F09F1 /* tdd-sample-postfix-calculator */;
-			targetProxy = EB1D65EA1BE15E030088FE75 /* PBXContainerItemProxy */;
-		};
 		EBCA1A881B61785B004F09F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EBCA1A6C1B61785B004F09F1 /* tdd-sample-postfix-calculator */;
@@ -455,42 +355,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		EB1D65F41BE15E030088FE75 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B99A84A209DE819C9A5CB24 /* Pods-tdd-sample-postfix-calculatorTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = "";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "tdd-sample-postfix-calculatorTests copy-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.paintedharmonygroup.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calc-Postfix-TDD.app/Calc-Postfix-TDD";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
-			};
-			name = Debug;
-		};
-		EB1D65F51BE15E030088FE75 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63FE5FF24936EE431CF06CE2 /* Pods-tdd-sample-postfix-calculatorTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = "";
-				INFOPLIST_FILE = "tdd-sample-postfix-calculatorTests copy-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.paintedharmonygroup.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calc-Postfix-TDD.app/Calc-Postfix-TDD";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
-			};
-			name = Release;
-		};
 		EBCA1A8E1B61785B004F09F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -604,7 +468,7 @@
 		};
 		EBCA1A941B61785B004F09F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B99A84A209DE819C9A5CB24 /* Pods-tdd-sample-postfix-calculatorTests.debug.xcconfig */;
+			baseConfigurationReference = 0885CEB549B42291ADA103F4 /* Pods-tdd-sample-postfix-calculatorTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = "";
@@ -624,7 +488,7 @@
 		};
 		EBCA1A951B61785B004F09F1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63FE5FF24936EE431CF06CE2 /* Pods-tdd-sample-postfix-calculatorTests.release.xcconfig */;
+			baseConfigurationReference = AF7B62208FD37522223CC698 /* Pods-tdd-sample-postfix-calculatorTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = "";
@@ -641,15 +505,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EB1D65F31BE15E030088FE75 /* Build configuration list for PBXNativeTarget "tdd-sample-postfix-calculatorAcceptanceTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EB1D65F41BE15E030088FE75 /* Debug */,
-				EB1D65F51BE15E030088FE75 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		EBCA1A681B61785B004F09F1 /* Build configuration list for PBXProject "Calc-Postfix-TDD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
