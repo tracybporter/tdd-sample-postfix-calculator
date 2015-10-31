@@ -1,3 +1,5 @@
+platform :ios, "7.0"
+
 target 'tdd-sample-postfix-calculator' do
 
 end
