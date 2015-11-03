@@ -34,6 +34,20 @@
                ReferencedContainer = "container:Calc-Postfix-TDD.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EBC23B6A1BE4028A0084EF87"
+               BuildableName = "tdd-sample-postfix-calculatorAcceptanceTests.xctest"
+               BlueprintName = "tdd-sample-postfix-calculatorAcceptanceTests"
+               ReferencedContainer = "container:Calc-Postfix-TDD.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
