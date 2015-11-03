@@ -214,6 +214,7 @@
 				EBC23B681BE4028A0084EF87 /* Frameworks */,
 				EBC23B691BE4028A0084EF87 /* Resources */,
 				30DF7BBADF27C79834A1DCC2 /* Copy Pods Resources */,
+				6C3BE91A045D9B7EEACA58B1 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,6 +252,7 @@
 				EBCA1A831B61785B004F09F1 /* Frameworks */,
 				EBCA1A841B61785B004F09F1 /* Resources */,
 				DB3885D8E767A3629889680F /* Copy Pods Resources */,
+				2DD81327900A5D54F357C2C5 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -333,6 +335,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2DD81327900A5D54F357C2C5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tdd-sample-postfix-calculatorTests/Pods-tdd-sample-postfix-calculatorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		30DF7BBADF27C79834A1DCC2 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -346,6 +363,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tdd-sample-postfix-calculatorAcceptanceTests/Pods-tdd-sample-postfix-calculatorAcceptanceTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C3BE91A045D9B7EEACA58B1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tdd-sample-postfix-calculatorAcceptanceTests/Pods-tdd-sample-postfix-calculatorAcceptanceTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		792A3BB46389F496E5AB114E /* Check Pods Manifest.lock */ = {
