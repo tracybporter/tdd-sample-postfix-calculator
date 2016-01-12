@@ -64,6 +64,13 @@
     XCTAssertEqual(@"-3.6".doubleValue, ((NSString *) self.postfixCalculator.valueStack.lastObject).doubleValue);
 }
 
+- (void)testDivide_ByZeroThrowsException {
+    [self.postfixCalculator append:@"999"];
+    [self.postfixCalculator append:@"0"];
+
+    XCTAssertThrowsSpecificNamed([self.postfixCalculator divide], NSException, NSDecimalNumberDivideByZeroException, @"should throw NSDecimalNumberDivideByZeroException");
+}
+
 - (void)testMultiplies_PositiveIntegersAndManipulatesStack {
     [self.postfixCalculator append:@"101"];
     [self.postfixCalculator append:@"5"];
