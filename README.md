@@ -22,7 +22,7 @@ This is my first objective-c application. It is a simple and incomplete implemen
     1. Deploy application to app store
 1. Completed
     1. Tests run at the command line.
-        1. `xcodebuild test -workspace tdd-sample-postfix-calculator.xcworkspace -scheme tdd-sample-postfix-calculator -destination 'platform=iOS Simulator,name=iPhone 5s'`
+        1. `xcodebuild test -workspace Calc-Postfix-TDD.xcworkspace -scheme Calc-Postfix-TDD-All-Tests -destination 'platform=iOS Simulator,name=iPhone 5s'`
      1. Create a CI environment: https://app.greenhouseci.com/#/projects
         1. Tests run in the CI environment on default destination/simulator
         1. CI build sensative to commit on master
