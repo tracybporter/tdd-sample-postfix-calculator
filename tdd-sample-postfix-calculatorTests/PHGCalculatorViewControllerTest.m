@@ -35,6 +35,10 @@ PHGPostfixCalculator *mockPostfixCalculator;
     XCTAssertTrue([self foundButtonWithTitle:@"×"], "Expected button titled ×");
 }
 
+- (void)testSubview_DivideButton {
+    XCTAssertTrue([self foundButtonWithTitle:@"÷"], "Expected button titled ×");
+}
+
 - (void)testSubview_SubtractButton {
     XCTAssertTrue([self foundButtonWithTitle:@"−"], "Expected button titled −");
 }
