@@ -19,18 +19,20 @@
 }
 
 - (NSString *)divide {
-    return self.valueStack.lastObject;
+    return [self performOperation:^(double lastOnStack, double previous) {
+        return (previous/lastOnStack);
+    }];
 };
 
 - (NSString *)multiply {
-    return [self performOperation:^(double lastOnStack, double second) {
-        return (lastOnStack * second);
+    return [self performOperation:^(double lastOnStack, double previous) {
+        return (lastOnStack * previous);
     }];
 }
 
 - (NSString *)subtract {
-    return [self performOperation:^(double lastOnStack, double second) {
-        return (second - lastOnStack);
+    return [self performOperation:^(double lastOnStack, double previous) {
+        return (previous - lastOnStack);
     }];
 }
 
