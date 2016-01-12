@@ -51,6 +51,19 @@
     XCTAssertEqualObjects(@"-10", [self.postfixCalculator add]);
 }
 
+-(void)testDivide_SingleValueReturnsItself {
+    [self.postfixCalculator append:@"3007"];
+    XCTAssertEqualObjects(@"3007", [self.postfixCalculator divide]);
+}
+
+- (void)testDivide_TwoNumbersAndManipulatesStack {
+    [self.postfixCalculator append:@"-7.2"];
+    [self.postfixCalculator append:@"2"];
+
+    XCTAssertEqual(@"-3.6".doubleValue, [[self.postfixCalculator divide] doubleValue]);
+    XCTAssertEqual(@"-3.6".doubleValue, ((NSString *) self.postfixCalculator.valueStack.lastObject).doubleValue);
+}
+
 - (void)testMultiplies_PositiveIntegersAndManipulatesStack {
     [self.postfixCalculator append:@"101"];
     [self.postfixCalculator append:@"5"];

@@ -23,6 +23,7 @@ PHGPostfixCalculator *mockPostfixCalculator;
 }
 
 - (void)tearDown {
+    [(MKTBaseMockObject *) mockPostfixCalculator reset];
     calculatorViewController = nil;
     [super tearDown];
 }
@@ -35,9 +36,14 @@ PHGPostfixCalculator *mockPostfixCalculator;
     XCTAssertTrue([self foundButtonWithTitle:@"×"], "Expected button titled ×");
 }
 
+- (void)testSubview_DivideButton {
+    XCTAssertTrue([self foundButtonWithTitle:@"÷"], "Expected button titled ×");
+}
+
 - (void)testSubview_SubtractButton {
     XCTAssertTrue([self foundButtonWithTitle:@"−"], "Expected button titled −");
 }
+
 - (void)testSubview_AddButton {
     XCTAssertTrue([self foundButtonWithTitle:@"+"], "Expected button titled −");
 }
@@ -85,6 +91,11 @@ PHGPostfixCalculator *mockPostfixCalculator;
 - (void)testConnectionOfButton_Multiply {
     [self touchUpInsideButton:@"×"];
     [verify(mockPostfixCalculator) multiply];
+}
+
+- (void)testConnectionOfButton_Divide {
+    [self touchUpInsideButton:@"÷"];
+    [verify(mockPostfixCalculator) divide];
 }
 
 - (void)testConnectionOfButton_Subtract {
@@ -149,7 +160,7 @@ PHGPostfixCalculator *mockPostfixCalculator;
 }
 
 - (void)testDoAddition_AppendsNumberAndAllowsUsersToEnterMoreNumbers {
-    [given([mockPostfixCalculator multiply]) willReturn:@"anything"];
+    [given([mockPostfixCalculator add]) willReturn:@"anything"];
     [self touchUpInsideButton:@"4"];
     [calculatorViewController doAddition];
     [self touchUpInsideButton:@"3"];
@@ -158,6 +169,24 @@ PHGPostfixCalculator *mockPostfixCalculator;
     XCTAssertEqualObjects(@"3", calculatorViewController.numberDisplay.text);
 }
 
+- (void)testDoDivision_ShowsQuotientInNumberDisplay {
+    [given([mockPostfixCalculator divide]) willReturn:@"2.6"];
+
+    [calculatorViewController doDivision];
+
+    XCTAssertEqualObjects(@"2.6", calculatorViewController.numberDisplay.text);
+    [verify(mockPostfixCalculator) divide];
+}
+
+- (void)testDoDivision_AppendsNumberAndAllowsUsersToEnterMoreNumbers {
+    [given([mockPostfixCalculator divide]) willReturn:@"do not care"];
+    [self touchUpInsideButton:@"9"];
+    [calculatorViewController doDivision];
+    [self touchUpInsideButton:@"1"];
+
+    [verify(mockPostfixCalculator) append:@"9"];
+    XCTAssertEqualObjects(@"1", calculatorViewController.numberDisplay.text);
+}
 - (void)testDoMultiplication_ShowsProductInNumberDisplay {
     [given([mockPostfixCalculator multiply]) willReturn:@"612"];
 

@@ -11,6 +11,7 @@
 		CFA2C4B6FC320FEF5CDA6A4D /* PHGCalculatorViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2C53D2BBC2C5744829B0F /* PHGCalculatorViewControllerTest.m */; };
 		CFA2C5D4780E331F99272C8E /* PHGCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2CB072B42CFD286F40D0C /* PHGCalculatorViewController.m */; };
 		CFA2C64BDDEB432084BBCF29 /* PHGPostfixCalculatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2CEF5951C33ACDE9C818B /* PHGPostfixCalculatorTest.m */; };
+		CFA2C6F4A36E8C41866C7E94 /* DivisionFnTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2CD104DCD7DF4054E57F6 /* DivisionFnTest.m */; };
 		CFA2CCD83DC936052C9CA2A9 /* PHGPostfixCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2CC4CED3C55F65BEEFCCE /* PHGPostfixCalculator.m */; };
 		EB3B539E1BE4043E00FEF9D3 /* AdditionFnTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3B53981BE4043E00FEF9D3 /* AdditionFnTest.m */; };
 		EB3B539F1BE4043E00FEF9D3 /* BasicUiFntest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3B53991BE4043E00FEF9D3 /* BasicUiFntest.m */; };
@@ -53,6 +54,7 @@
 		CFA2CB072B42CFD286F40D0C /* PHGCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHGCalculatorViewController.m; sourceTree = "<group>"; };
 		CFA2CC42F2E4BB43EA13B298 /* PHGPostfixCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHGPostfixCalculator.h; sourceTree = "<group>"; };
 		CFA2CC4CED3C55F65BEEFCCE /* PHGPostfixCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHGPostfixCalculator.m; sourceTree = "<group>"; };
+		CFA2CD104DCD7DF4054E57F6 /* DivisionFnTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DivisionFnTest.m; sourceTree = "<group>"; };
 		CFA2CEF5951C33ACDE9C818B /* PHGPostfixCalculatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHGPostfixCalculatorTest.m; sourceTree = "<group>"; };
 		E0753F914479E36395078C1D /* Pods-tdd-sample-postfix-calculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tdd-sample-postfix-calculatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tdd-sample-postfix-calculatorTests/Pods-tdd-sample-postfix-calculatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		EB3B53981BE4043E00FEF9D3 /* AdditionFnTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdditionFnTest.m; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				EB3B539C1BE4043E00FEF9D3 /* PHGBaseFnTest.m */,
 				EB3B539D1BE4043E00FEF9D3 /* SubtractionFnTest.m */,
 				EBC23B6F1BE4028A0084EF87 /* Info.plist */,
+				CFA2CD104DCD7DF4054E57F6 /* DivisionFnTest.m */,
 			);
 			path = "tdd-sample-postfix-calculatorAcceptanceTests";
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				EB3B53A01BE4043E00FEF9D3 /* MultiplicationFnTest.m in Sources */,
 				EB3B539F1BE4043E00FEF9D3 /* BasicUiFntest.m in Sources */,
 				EB3B539E1BE4043E00FEF9D3 /* AdditionFnTest.m in Sources */,
+				CFA2C6F4A36E8C41866C7E94 /* DivisionFnTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,6 @@
     return self;
 }
 
-
 - (void)append:(NSString *)aNumberValue {
     [self.valueStack addObject:aNumberValue];
 }
@@ -19,15 +18,21 @@
     }];
 }
 
+- (NSString *)divide {
+    return [self performOperation:^(double lastOnStack, double previous) {
+        return (previous/lastOnStack);
+    }];
+};
+
 - (NSString *)multiply {
-    return [self performOperation:^(double lastOnStack, double second) {
-        return (lastOnStack * second);
+    return [self performOperation:^(double lastOnStack, double previous) {
+        return (lastOnStack * previous);
     }];
 }
 
 - (NSString *)subtract {
-    return [self performOperation:^(double lastOnStack, double second) {
-        return (second - lastOnStack);
+    return [self performOperation:^(double lastOnStack, double previous) {
+        return (previous - lastOnStack);
     }];
 }
 
