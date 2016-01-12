@@ -8,7 +8,6 @@
     return self;
 }
 
-
 - (void)append:(NSString *)aNumberValue {
     [self.valueStack addObject:aNumberValue];
 }
@@ -20,7 +19,7 @@
 }
 
 - (NSString *)divide {
-    return nil;
+    return self.valueStack.lastObject;
 };
 
 - (NSString *)multiply {

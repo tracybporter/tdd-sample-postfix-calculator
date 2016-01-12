@@ -51,6 +51,11 @@
     XCTAssertEqualObjects(@"-10", [self.postfixCalculator add]);
 }
 
+-(void)testDivide_SingleValueReturnsItself {
+    [self.postfixCalculator append:@"3007"];
+    XCTAssertEqualObjects(@"3007", [self.postfixCalculator divide]);
+}
+
 - (void)testMultiplies_PositiveIntegersAndManipulatesStack {
     [self.postfixCalculator append:@"101"];
     [self.postfixCalculator append:@"5"];
