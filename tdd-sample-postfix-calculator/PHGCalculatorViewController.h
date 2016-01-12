@@ -8,9 +8,11 @@
 
 - (IBAction)enter;
 
-- (IBAction)doMultiplication;
-
 - (IBAction)doAddition;
+
+- (IBAction)doDivision;
+
+- (IBAction)doMultiplication;
 
 - (IBAction)doSubtraction;
 @end

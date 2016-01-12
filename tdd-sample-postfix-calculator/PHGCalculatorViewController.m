@@ -42,7 +42,10 @@
 }
 
 - (IBAction)doDivision {
-    [self.postfixCalculator divide];
+    if (_userIsEnteringANumber) {
+        [self enter];
+    }
+    self.numberDisplay.text = [self.postfixCalculator divide];
 }
 
 - (IBAction)doSubtraction {
