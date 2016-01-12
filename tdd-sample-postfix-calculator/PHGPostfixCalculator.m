@@ -19,6 +19,10 @@
     }];
 }
 
+- (NSString *)divide {
+    return nil;
+};
+
 - (NSString *)multiply {
     return [self performOperation:^(double lastOnStack, double second) {
         return (lastOnStack * second);

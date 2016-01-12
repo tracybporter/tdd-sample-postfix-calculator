@@ -8,6 +8,8 @@
 
 - (NSString *)add;
 
+- (NSString *)divide;
+
 - (NSString *)multiply;
 
 - (NSString *)subtract;

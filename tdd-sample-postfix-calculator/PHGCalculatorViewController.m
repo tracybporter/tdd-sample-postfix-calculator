@@ -1,5 +1,4 @@
 #import "PHGCalculatorViewController.h"
-#import "PHGPostfixCalculator.h"
 
 @implementation PHGCalculatorViewController
 
@@ -40,6 +39,10 @@
     [self manageUserEntry:^{
         return [self.postfixCalculator add];
     }];
+}
+
+- (IBAction)doDivision {
+    [self.postfixCalculator divide];
 }
 
 - (IBAction)doSubtraction {

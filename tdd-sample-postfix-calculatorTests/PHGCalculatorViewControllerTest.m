@@ -23,6 +23,7 @@ PHGPostfixCalculator *mockPostfixCalculator;
 }
 
 - (void)tearDown {
+    [(MKTBaseMockObject *) mockPostfixCalculator reset];
     calculatorViewController = nil;
     [super tearDown];
 }
@@ -42,6 +43,7 @@ PHGPostfixCalculator *mockPostfixCalculator;
 - (void)testSubview_SubtractButton {
     XCTAssertTrue([self foundButtonWithTitle:@"−"], "Expected button titled −");
 }
+
 - (void)testSubview_AddButton {
     XCTAssertTrue([self foundButtonWithTitle:@"+"], "Expected button titled −");
 }
@@ -89,6 +91,11 @@ PHGPostfixCalculator *mockPostfixCalculator;
 - (void)testConnectionOfButton_Multiply {
     [self touchUpInsideButton:@"×"];
     [verify(mockPostfixCalculator) multiply];
+}
+
+- (void)testConnectionOfButton_Divide {
+    [self touchUpInsideButton:@"÷"];
+    [verify(mockPostfixCalculator) divide];
 }
 
 - (void)testConnectionOfButton_Subtract {
