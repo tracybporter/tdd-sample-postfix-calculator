@@ -20,8 +20,7 @@
 
 - (NSString *)divide {
     if ([[self.valueStack lastObject] doubleValue] == 0) {
-        NSException *myException = [NSException exceptionWithName:@"NSDecimalNumberDivideByZeroException" reason:@"Division by zero not allowed." userInfo:@""];
-        @throw myException;
+        @throw ([NSException exceptionWithName:@"NSDecimalNumberDivideByZeroException" reason:@"Division by zero not allowed." userInfo:nil]);
     }
     return [self performOperation:^(double lastOnStack, double previous) {
         return (previous / lastOnStack);
