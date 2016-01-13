@@ -42,7 +42,6 @@
 }
 
 - (IBAction)doDivision {
-
     @try {
         [self manageUserEntry:^{
             return [self.postfixCalculator divide];
@@ -52,7 +51,6 @@
         [self doAllClear];
         self.numberDisplay.text = @"Undefined";
     }
-
 }
 
 - (IBAction)doSubtraction {
