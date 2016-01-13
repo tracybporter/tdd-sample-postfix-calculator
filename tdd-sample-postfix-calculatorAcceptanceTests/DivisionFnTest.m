@@ -30,4 +30,22 @@
     XCTAssertEqualObjects(@"3", [self retrieveDisplayValue]);
 }
 
+- (void)test61_dividedBy_Zero_DoesNotBlowUp {
+    [tester tapViewWithAccessibilityLabel:@"Six"];
+    [tester tapViewWithAccessibilityLabel:@"One"];
+
+    [tester tapViewWithAccessibilityLabel:@"Enter"];
+
+    [tester tapViewWithAccessibilityLabel:@"Zero"];
+
+    [tester tapViewWithAccessibilityLabel:@"Enter"];
+
+    [tester tapViewWithAccessibilityLabel:@"Divide"];
+
+    XCTAssertEqualObjects(@"Undefined", [self retrieveDisplayValue]);
+
+    [tester tapViewWithAccessibilityLabel:@"Six"];
+    XCTAssertEqualObjects(@"6", [self retrieveDisplayValue]);
+}
+
 @end

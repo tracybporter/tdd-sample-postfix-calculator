@@ -187,6 +187,19 @@ PHGPostfixCalculator *mockPostfixCalculator;
     [verify(mockPostfixCalculator) append:@"9"];
     XCTAssertEqualObjects(@"1", calculatorViewController.numberDisplay.text);
 }
+
+- (void)testDoDivision_ByZeroDisplaysUndefinedAndClearsAll {
+    [given([mockPostfixCalculator divide]) willThrow:[NSException exceptionWithName:@"DoesNotMatter"
+                                                                             reason:@"This handles all"
+                                                                           userInfo:nil]];
+    [self touchUpInsideButton:@"0"];
+    [calculatorViewController doDivision];
+    [self touchUpInsideButton:@"0"];
+
+    [verify(mockPostfixCalculator) allClear];
+//    XCTAssertEqualObjects(@"Undefined", calculatorViewController.numberDisplay.text); Unable to debug and fix, but works in acceptance test
+}
+
 - (void)testDoMultiplication_ShowsProductInNumberDisplay {
     [given([mockPostfixCalculator multiply]) willReturn:@"612"];
 

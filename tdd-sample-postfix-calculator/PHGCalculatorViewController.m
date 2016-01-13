@@ -42,9 +42,15 @@
 }
 
 - (IBAction)doDivision {
-    [self manageUserEntry:^{
-        return [self.postfixCalculator divide];
-    }];
+    @try {
+        [self manageUserEntry:^{
+            return [self.postfixCalculator divide];
+        }];
+    }
+    @catch (NSException *ex) {
+        [self doAllClear];
+        self.numberDisplay.text = @"Undefined";
+    }
 }
 
 - (IBAction)doSubtraction {
