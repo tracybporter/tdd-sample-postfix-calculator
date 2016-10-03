@@ -23,7 +23,7 @@ PHGPostfixCalculator *mockPostfixCalculator;
 }
 
 - (void)tearDown {
-    [(MKTBaseMockObject *) mockPostfixCalculator reset];
+    [(MKTBaseMockObject *) mockPostfixCalculator mkt_stopMocking];
     calculatorViewController = nil;
     [super tearDown];
 }
